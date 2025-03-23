@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ProjectGuid>9b40ae30-56b5-494c-a696-e2d66bc7c19f</ProjectGuid>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IziHardGames.Refs.UnityEngine6000"/>
+  </ItemGroup>
+</Project>

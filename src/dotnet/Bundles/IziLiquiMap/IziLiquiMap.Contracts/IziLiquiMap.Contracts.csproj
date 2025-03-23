@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ProjectGuid>30720ca1-615b-4d49-97ce-b678f27a2ff8</ProjectGuid>
+    <RootNamespace>IziHardGames.IziLiquiMap.Contracts</RootNamespace>
+  </PropertyGroup>
+</Project>

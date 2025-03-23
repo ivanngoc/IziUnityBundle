@@ -1,0 +1,14 @@
+<Project>
+  <PropertyGroup>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <CentralPackageVersionOverrideEnabled>true</CentralPackageVersionOverrideEnabled>
+    <NoWarn>CS1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageVersion Include="IziHardGames.Geometry" Version="0.0.1" />
+    <PackageVersion Include="IziHardGames.Refs.UnityEngine6000" Version="1.0.0" />
+    <PackageVersion Include="IziHardGames.Refs.UnityEditor6000" Version="1.0.0" />
+  </ItemGroup>
+</Project>

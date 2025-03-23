@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ProjectGuid>8e0fabea-342c-41e7-9285-bed6be21738a</ProjectGuid>
+    <RootNamespace>IziHardGames.IziLiquiMap.Domain</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IziHardGames.Geometry"/>
+  </ItemGroup>
+</Project>

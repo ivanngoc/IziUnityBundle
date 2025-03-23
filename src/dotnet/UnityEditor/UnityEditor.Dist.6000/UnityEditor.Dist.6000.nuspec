@@ -1,0 +1,28 @@
+﻿<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>IziHardGames.Refs.UnityEditor6000</id>
+    <version>1.0.0</version>
+    <authors>Tran Ngoc Anh</authors>
+    <description>A brief description of your package.</description>
+    <tags>Exception Error Log</tags>
+    <license type="expression">MIT</license>
+    <releaseNotes>Initial release.</releaseNotes>
+    <readme>README.md</readme>
+    <copyright>Copyright © 2025 [Tran Ngoc Anh/IziHardGames]</copyright>
+    <dependencies>
+      <group>
+
+      </group>
+      <group targetFramework="netstandard2.1">
+        <!-- Add dependencies specific to .NET 8.0 here -->
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="UnityEditor.dll" target="lib\netstandard2.1" />
+    <file src="UnityEditor.xml" target="lib\netstandard2.1" />
+    <file src="LICENSE"  />
+    <file src="README.md" />
+  </files>
+</package>
