@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ProjectGuid>586b635d-180d-45c2-93b7-000ec8b5fc55</ProjectGuid>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IziHardGames.Geometry" PrivateAssets="all" />
+    <PackageReference Include="IziHardGames.EventSourcing.Contracts" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IziHardGames.UserControl.Domain\IziHardGames.UserControl.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

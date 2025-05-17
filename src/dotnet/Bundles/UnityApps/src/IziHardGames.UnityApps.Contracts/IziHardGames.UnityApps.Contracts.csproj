@@ -1,0 +1,10 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <RootNamespace>IziHardGames.UnityApps</RootNamespace>
+    <ProjectGuid>945aa520-2009-47b8-bc72-3439c819ae67</ProjectGuid>
+  </PropertyGroup>
+
+</Project>

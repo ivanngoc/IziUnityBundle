@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+    <ProjectGuid>5f717ffe-3038-4126-9e38-09ccbb58f29f</ProjectGuid>
+    <RootNamespace>IziHardGames.IziLiquiMap.UnitTests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio" />
+
+    <PackageReference Include="IziHardGames.Pools.Contracts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Geometry\Geometry.Domain\Geometry.Domain.csproj" />
+    <ProjectReference Include="..\IziLiquiMap.Contracts\IziLiquiMap.Contracts.csproj" />
+    <ProjectReference Include="..\IziLiquiMap.Domain\IziLiquiMap.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+</Project>

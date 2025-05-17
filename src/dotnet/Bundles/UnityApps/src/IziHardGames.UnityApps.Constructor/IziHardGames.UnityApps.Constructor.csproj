@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <ProjectName>izhg.app-constructor.unity</ProjectName>
+    <ProjectGuid>a439988c-49a5-466d-9bc7-5b8b63173781</ProjectGuid>
+    <RootNamespace>IziHardGames.UnityApps.Constructor</RootNamespace>
+    <Authors>Tran Ngoc Anh</Authors>
+    <Company>IziHardGames</Company>
+    <UnityEngine>true</UnityEngine>
+    <Description></Description>
+    <Author>Tran Ngoc Anh</Author>
+  </PropertyGroup>
+  
+  <!--<ItemGroup Condition="'$(Configuration)' == 'Release'">
+    <Compile Remove="Components\*.cs" />
+    <Content Include="Components\*.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>-->
+  
+  <!--<ItemGroup>
+    <ProjectReference Include="..\com.izihardgames.dependency-injection.abstractions\izhg.dependency-injection.abstractions.csproj" />
+    <ProjectReference Include="..\com.izihardgames.editor.menu.unity\izhg.editor.menu-constants.unity.csproj" />
+    <ProjectReference Include="..\com.izihardgames.scriptable-obj-linking-core.unity\izhg.scriptable-obj-linking.unity.csproj" />
+  </ItemGroup>-->
+
+  <ItemGroup>
+    <PackageReference Include="IziHardGames.Refs.UnityEngine6000" PrivateAssets="All" />
+    <PackageReference Include="IziHardGames.IziUnityEditor" PrivateAssets="All" />
+    <PackageReference Include="IziHardGames.UnityApps.Attributes" PrivateAssets="All" />
+    <PackageReference Include="IziHardGames.DependencyInjection.Contracts" PrivateAssets="All" />
+    
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" PrivateAssets="All"/>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\IziHardGames.UnityApps.Contracts\IziHardGames.UnityApps.Contracts.csproj" />
+    <ProjectReference Include="..\IziHardGames.UnityApps.Domain\IziHardGames.UnityApps.Domain.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Update="Components\AppBuilderMono.cs.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Components\BootstrapMono.cs.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Components\BootstrapMonoAdapter.cs.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Components\IziBootstrap.cs.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

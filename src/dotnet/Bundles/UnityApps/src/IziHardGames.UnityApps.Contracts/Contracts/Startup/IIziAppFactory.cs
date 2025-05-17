@@ -1,0 +1,10 @@
+﻿using System.Threading.Tasks;
+using IziHardGames.UnityApps.Contracts;
+
+namespace IziHardGames.Apps.Abstractions.Lib
+{
+    public interface IIziAppFactory
+    {
+        public Task<IIziAppVersion1> CreateAsync(IIziAppBuilder builder);
+    }
+}

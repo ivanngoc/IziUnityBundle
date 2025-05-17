@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ProjectGuid>5f65488a-8154-4985-9278-4df53abcaaac</ProjectGuid>
+  </PropertyGroup>
+
+</Project>

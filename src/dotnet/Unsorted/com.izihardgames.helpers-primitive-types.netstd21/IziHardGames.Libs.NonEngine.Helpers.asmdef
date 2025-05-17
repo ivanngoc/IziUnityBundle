@@ -1,0 +1,17 @@
+{
+  "name": "IziHardGames.Libs.NonEngine.Helpers",
+  "rootNamespace": "",
+  "references": [
+    "GUID:e5dafb6bbd1d44c428b77bc1e9205e3c"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": true,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": true,
+  "UNITY_META_GUID": "a93563bf-1e59-a864-dac4-0e4734a096cc"
+}

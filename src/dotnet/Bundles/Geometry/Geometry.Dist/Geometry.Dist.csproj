@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <Nullable>enable</Nullable>
+    <ProjectGuid>e322e7ba-975b-4b46-8259-aeef070dd3c9</ProjectGuid>
   </PropertyGroup>
 
   <ItemGroup>

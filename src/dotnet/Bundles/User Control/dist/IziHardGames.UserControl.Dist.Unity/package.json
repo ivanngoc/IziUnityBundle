@@ -1,0 +1,13 @@
+{
+  "name": "com.izihardgames.user-control",
+  "version": "0.0.1",
+  "unity": "6000.0",
+  "unityRelease": "31f1",
+  "displayName": "Izi User Control",
+  "description": "Example",
+  "keywords": [
+  ],
+  "dependencies": {
+
+  }
+}

@@ -1,6 +1,6 @@
 ﻿namespace IziHardGames.IziLiquiMap.Contracts
 {
-    public interface ILiquiMapCell
+    public interface ILiquiMapCell : IMapCell
     {
         float Level { get; }
     }

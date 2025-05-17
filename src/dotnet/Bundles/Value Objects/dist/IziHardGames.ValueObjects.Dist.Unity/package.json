@@ -1,0 +1,13 @@
+{
+  "name": "com.izihardgames.value-objects",
+  "version": "0.0.1",
+  "unity": "6000.0",
+  "unityRelease": "31f1",
+  "displayName": "Izi Value Objects",
+  "description": "Example",
+  "keywords": [
+  ],
+  "dependencies": {
+
+  }
+}

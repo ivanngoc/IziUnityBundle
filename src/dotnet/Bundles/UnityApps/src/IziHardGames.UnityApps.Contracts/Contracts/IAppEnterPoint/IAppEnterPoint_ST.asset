@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0281a0e03a4f07448eee02c7ef65cec, type: 3}
+  m_Name: IAppEnterPoint_ST
+  m_EditorClassIdentifier: 
+  id: {fileID: 11400000, guid: 2de6a1626e36b65468c53bb36d52e9e2, type: 2}
+  iziSerilizedType:
+    guid: 28add382-3d8d-41db-b779-1c573cf9ea36
+    assemblyQualifiedName: IziHardGames.Apps.Abstractions.Lib.IAppEnterPoint, izhg.app-contracts.unity,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null

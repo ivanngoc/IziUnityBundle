@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <ProjectGuid>134505e1-2b36-4bd6-8df0-8178686e9e53</ProjectGuid>
+    <RootNamespace>IziHardGames</RootNamespace>
+    <Authors>Tran Ngoc Anh</Authors>
+    <Company>IziHardGames</Company>
+    <Description>
+    </Description>
+    <Author>Tran Ngoc Anh</Author>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IziHardGames.Pools.Contracts" PrivateAssets="All" />
+  </ItemGroup>
+  <!--<ItemGroup>
+    <ProjectReference Include="$(IZHG_ROOT)\com.izihardgames.app.abstractions.netstd21\Any\izhg.apps.abstractions.netstd21.csproj">
+      <Project>239298d4-8ee9-408d-902d-ed7a7801332d</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(IZHG_ROOT)\com.izihardgames.pools.netstd21\Runtime\Any\izhg.pools.netstd21.asmdef.csproj">
+      <Project>706eeb85-5f98-44c4-bfb4-e929fc152544</Project>
+    </ProjectReference>
+  </ItemGroup>-->
+</Project>

@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ProjectGuid>569f8883-92ad-4732-a2ae-557f7a8b8ade</ProjectGuid>
+    <IziTags>Dist;Unity3d</IziTags>
+    <RootNamespace>IziHardGames.IziLiquiMap</RootNamespace>
+    <Configurations>Debug;Release;Unity</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IziLiquiMap.Contracts\IziLiquiMap.Contracts.csproj" />
+    <ProjectReference Include="..\IziLiquiMap.Domain\IziLiquiMap.Domain.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Unity'">
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(Configuration)' == 'Unity'">
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="IziLiquiMap.Dist.deps.json.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziLiquiMap.Dist.dll.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziLiquiMap.Dist.pdb.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziLiquiMap.Dist.UnityExample.dll.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziLiquiMap.Dist.UnityExample.xml.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziLiquiMap.Dist.xml.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="package.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="package.json.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

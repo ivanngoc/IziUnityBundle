@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <RootNamespace>IziHardGames.Cameras</RootNamespace>
+    <ProjectGuid>e426f79b-593f-4abe-896f-95f0b176e07d</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="IziHardGames.Refs.UnityEngine6000" PrivateAssets="all"/>
+    <PackageReference Include="IziHardGames.Refs.InputSystem" PrivateAssets="all"/>
+  </ItemGroup>
+</Project>

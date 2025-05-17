@@ -1,0 +1,10 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ProjectGuid>fad0ef8f-ef9a-46a6-969e-76190c4ee8c5</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Algorithms\Dijkstra\" />
+  </ItemGroup>
+</Project>

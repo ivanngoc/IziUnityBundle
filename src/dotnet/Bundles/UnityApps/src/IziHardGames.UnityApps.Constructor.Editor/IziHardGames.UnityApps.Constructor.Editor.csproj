@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <ProjectGuid>a155df19-83b0-49ec-bed8-808a358b6416</ProjectGuid>
+    <RootNamespace>IziHardGames</RootNamespace>
+    <Authors>Tran Ngoc Anh</Authors>
+    <Company>IziHardGames</Company>
+    <UnityEngine>true</UnityEngine>
+    <Description></Description>
+    <RootNamespace>IziHardGames.UnityApps.Constructor</RootNamespace>
+    <Author>Tran Ngoc Anh</Author>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IziHardGames.Refs.UnityEngine6000" PrivateAssets="All" />
+    <PackageReference Include="IziHardGames.IziUnityEditor" PrivateAssets="All" />
+  </ItemGroup>
+</Project>

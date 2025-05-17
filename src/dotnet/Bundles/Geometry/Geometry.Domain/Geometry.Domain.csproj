@@ -4,6 +4,18 @@
     <Nullable>enable</Nullable>
     <RootNamespace>b6f34e5b-bd89-48cc-8819-22071238d2f7</RootNamespace>
     <RootNamespace>IziHardGames.Geometry.Domain</RootNamespace>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
+  <ItemGroup>
+    <None Update="Geometry.Domain.dll.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Geometry.Domain.pdb.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Geometry.Domain.xml.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 
 </Project>

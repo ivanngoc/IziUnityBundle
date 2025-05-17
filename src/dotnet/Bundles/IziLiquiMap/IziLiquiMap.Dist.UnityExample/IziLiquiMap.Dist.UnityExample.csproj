@@ -3,9 +3,28 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <Nullable>enable</Nullable>
     <ProjectGuid>9b40ae30-56b5-494c-a696-e2d66bc7c19f</ProjectGuid>
+    <RootNamespace>IziHardGames.IziLiquiMap.ExampleForUnity</RootNamespace>
+    <Configurations>Debug;Release;Unity</Configurations>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="IziHardGames.Refs.UnityEngine6000"/>
+    <PackageReference Include="IziHardGames.Refs.UnityEngine6000" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IziLiquiMap.Domain\IziLiquiMap.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="package.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(Configuration)' == 'Unity'">
+  </ItemGroup>
+
+  <!--<PropertyGroup Condition="'$(Configuration)' == 'Unity'">
+    <PublishSingleFile>true</PublishSingleFile>
+  </PropertyGroup>-->
 </Project>

@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <ProjectGuid>b84bc33b-53ff-4db5-a875-803fc4a90789</ProjectGuid>
+    <RootNamespace>IziHardGames</RootNamespace>
+    <Authors>Tran Ngoc Anh</Authors>
+    <Company>IziHardGames</Company>
+    <Description>
+    </Description>
+    <Author>Tran Ngoc Anh</Author>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IziHardGames.Refs.UnityEngine6000" PrivateAssets="All" />
+    <PackageReference Include="IziHardGames.DotNetPrimitives" PrivateAssets="All" />
+    <PackageReference Include="IziHardGames.UnityTypes" PrivateAssets="All" />
+    <PackageReference Include="IziHardGames.CustomTypesForUnity" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IziHardGames.Libs.Graphs.NonEngine\IziHardGames.Graphs.csproj" />
+  </ItemGroup>
+  <!--<ItemGroup>
+    <ProjectReference Include="$(IZHG_ROOT)\com.izihardgames.app.abstractions.netstd21\Any\izhg.apps.abstractions.netstd21.csproj">
+      <Project>239298d4-8ee9-408d-902d-ed7a7801332d</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(IZHG_ROOT)\com.izihardgames.custom-types\IziHardGames.Libs.Engine.CustomTypes.asmdef.csproj">
+      <Project>2097281a-9e62-48b4-b422-e8e78c848201</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(IZHG_ROOT)\com.izihardgames.extensions.netstd21\izhg.extensions.netstd21.csproj">
+      <Project>9a40762f-aea1-43a4-869c-cb9582884a51</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(IZHG_ROOT)\com.izihardgames.extensions.unity\Runtime\IziHardGames.Libs.Engine.Extensions.asmdef.csproj">
+      <Project>4c31f516-8713-47c8-9f75-adac4bed6497</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(IZHG_ROOT)\Extensions based on Custom Types\IziHardGames.Libs.Engine.CustomTypes.Extensions.asmdef.csproj">
+      <Project>780d9ac8-1973-42cb-8c7f-1d2894ceada8</Project>
+    </ProjectReference>
+  </ItemGroup>-->
+</Project>

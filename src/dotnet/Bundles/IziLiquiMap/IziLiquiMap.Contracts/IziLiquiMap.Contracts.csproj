@@ -5,5 +5,26 @@
     <Nullable>enable</Nullable>
     <ProjectGuid>30720ca1-615b-4d49-97ce-b678f27a2ff8</ProjectGuid>
     <RootNamespace>IziHardGames.IziLiquiMap.Contracts</RootNamespace>
+    <Configurations>Debug;Release;Unity</Configurations>
   </PropertyGroup>
+
+  <ItemGroup Condition="'$(Configuration)' != 'Unity'">
+  </ItemGroup>
+  
+  <ItemGroup Condition="'$(Configuration)' == 'Unity'">
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Update="IziLiquiMap.Contracts.dll.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziLiquiMap.Contracts.pdb.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziLiquiMap.Contracts.xml.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+
 </Project>

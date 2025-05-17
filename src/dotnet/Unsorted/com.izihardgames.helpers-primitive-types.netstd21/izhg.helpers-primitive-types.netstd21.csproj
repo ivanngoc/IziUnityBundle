@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <ProjectName>izhg.helpers-primitive-types.netstd21</ProjectName>
+    <ProjectGuid>4cf517f7-b850-43e4-b64e-91f3b248235d</ProjectGuid>
+    <RootNamespace>IziHardGames</RootNamespace>
+    <Authors>Tran Ngoc Anh</Authors>
+    <Company>IziHardGames</Company>
+    <Description>
+    </Description>
+    <Author>Tran Ngoc Anh</Author>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <!--<ItemGroup>
+    <ProjectReference Include="$(IZHG_ROOT)\com.izihardgames.extensions.netstd21\izhg.extensions.netstd21.csproj">
+      <Project>9a40762f-aea1-43a4-869c-cb9582884a51</Project>
+    </ProjectReference>
+  </ItemGroup>-->
+
+  <ItemGroup>
+    <PackageReference Include="IziHardGames.DotNetPrimitives" PrivateAssets="All" />
+  </ItemGroup>
+</Project>

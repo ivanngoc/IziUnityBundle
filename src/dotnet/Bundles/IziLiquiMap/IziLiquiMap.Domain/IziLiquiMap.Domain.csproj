@@ -4,9 +4,33 @@
     <Nullable>enable</Nullable>
     <ProjectGuid>8e0fabea-342c-41e7-9285-bed6be21738a</ProjectGuid>
     <RootNamespace>IziHardGames.IziLiquiMap.Domain</RootNamespace>
+    <Configurations>Debug;Release;Unity</Configurations>
   </PropertyGroup>
 
+
+  <ItemGroup Condition="'$(Configuration)' == 'Unity'">
+    <PackageReference Remove="*" />
+  </ItemGroup>
+
   <ItemGroup>
-    <PackageReference Include="IziHardGames.Geometry"/>
+    <PackageReference Include="IziHardGames.Geometry" PrivateAssets="all" />
+    <PackageReference Include="IziHardGames.Pools.Contracts" PrivateAssets="all" />
+    <PackageReference Include="IziHardGames.ValueObjects.Contracts" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IziLiquiMap.Contracts\IziLiquiMap.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="IziLiquiMap.Domain.dll.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziLiquiMap.Domain.pdb.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziLiquiMap.Domain.xml.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>

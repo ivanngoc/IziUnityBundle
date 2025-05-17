@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <ProjectName>IziHardGames.Libs.Engine.Extensions.asmdef</ProjectName>
+    <ProjectGuid>4c31f516-8713-47c8-9f75-adac4bed6497</ProjectGuid>
+    <RootNamespace>IziHardGames</RootNamespace>
+    <Authors>Tran Ngoc Anh</Authors>
+    <Company>IziHardGames</Company>
+    <BaseOutputPath>C:\buildstemp\$(ProjectName)\$(Configuration)\bin</BaseOutputPath>
+    <BaseIntermediateOutputPath>C:\buildstemp\$(ProjectName)\$(Configuration)\obj</BaseIntermediateOutputPath>
+    <Description>
+    </Description>
+    <Author>Tran Ngoc Anh</Author>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\Unity3d Dlls\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(IZHG_ROOT)\com.izihardgames.buffers.netstd21\Runtime\izhg.buffers.netstd21.csproj">
+      <Project>2cbeccd4-5223-4d90-8924-bfa7f96a7b21</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(IZHG_ROOT)\com.izihardgames.extensions.netstd21\izhg.extensions.netstd21.csproj">
+      <Project>9a40762f-aea1-43a4-869c-cb9582884a51</Project>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

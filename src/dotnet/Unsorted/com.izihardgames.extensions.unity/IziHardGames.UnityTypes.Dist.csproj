@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <ProjectName>izhg.extensions.unity</ProjectName>
+    <ProjectGuid>6751f125-a038-4b06-aa1b-74db7ebd61aa</ProjectGuid>
+    <RootNamespace>IziHardGames</RootNamespace>
+    <Authors>Tran Ngoc Anh</Authors>
+    <Company>IziHardGames</Company>
+    <AssemblyName>IziHardGames.UnityTypes</AssemblyName>
+    <Description></Description>
+    <Author>Tran Ngoc Anh</Author>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="IziHardGames.Refs.UnityEngine6000" PrivateAssets="All" />
+    <!--<Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\.izhg-dlls\Unity3d Dlls\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>-->
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="package.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="package.json.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <NuspecFile>IziHardGames.UnityTypes.Dist.nuspec</NuspecFile>
+  </PropertyGroup>
+</Project>

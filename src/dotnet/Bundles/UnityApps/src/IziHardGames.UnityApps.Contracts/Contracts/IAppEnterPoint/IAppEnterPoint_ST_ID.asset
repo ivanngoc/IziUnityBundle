@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9425374a75dd9d4c9217c0de6f15e91, type: 3}
+  m_Name: IAppEnterPoint_ST_ID
+  m_EditorClassIdentifier: 
+  idAsString: 02cd24b4-48e0-4b1b-9a87-fdce6c76903c
+  guid: 02cd24b4-48e0-4b1b-9a87-fdce6c76903c
+  description: 

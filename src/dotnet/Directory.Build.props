@@ -3,6 +3,7 @@
     <Authors>Tran Ngoc Anh</Authors>
     <Company>IziHardGames</Company>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <!--<IziDirUnityPackages>C:\Users\ivan\Documents\.unity\GameProject5\Packages</IziDirUnityPackages>-->
   </PropertyGroup>
 
   <!--<PropertyGroup>
