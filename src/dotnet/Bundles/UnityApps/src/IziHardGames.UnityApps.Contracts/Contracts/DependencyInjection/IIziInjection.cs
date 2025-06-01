@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace IziHardGames.DependencyInjection.Abstractions
+namespace IziHardGames.UnityApps.Contracts.DependencyInjection
 {
+
     public interface IIziInjectable
     {
 

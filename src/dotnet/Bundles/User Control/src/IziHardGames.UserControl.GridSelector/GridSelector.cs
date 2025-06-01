@@ -1,5 +1,6 @@
 ﻿using System;
 using IziHardGames.EventSourcing.Contracts;
+using IziHardGames.EventSourcing.Contracts.Handlers;
 using IziHardGames.Geometry.Domain.Tilemap;
 using IziHardGames.Geometry.Domain.Vectors;
 using IziHardGames.UserControl.Domain.Events;
@@ -10,7 +11,7 @@ namespace IziHardGames.UserControl.GridSelector
     /// Horizontal plane by default.
     /// Y axis represents depth
     /// </summary>
-    public class GridSelector : IConsumer<OnRaycastChangedEvent>
+    public class GridSelector : IInMemoryConsumer<OnRaycastChangedEvent>
     {
         /// <summary>
         /// Normilized Up direction

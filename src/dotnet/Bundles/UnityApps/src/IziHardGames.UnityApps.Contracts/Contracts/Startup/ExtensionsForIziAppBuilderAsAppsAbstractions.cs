@@ -1,4 +1,4 @@
-﻿using IziHardGames.UnityApps.Contracts;
+﻿using IziHardGames.UnityApps.Contracts.Apps;
 
 namespace IziHardGames.Apps.Abstractions.Lib
 {

@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using IziHardGames.UnityApps.Contracts;
+using IziHardGames.UnityApps.Contracts.Apps;
+using IziHardGames.UnityApps.Contracts.DependencyInjection;
 
 namespace IziHardGames.Apps.Contracts
 {

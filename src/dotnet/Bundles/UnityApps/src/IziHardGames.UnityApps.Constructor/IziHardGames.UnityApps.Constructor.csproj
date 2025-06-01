@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <ProjectName>izhg.app-constructor.unity</ProjectName>
     <ProjectGuid>a439988c-49a5-466d-9bc7-5b8b63173781</ProjectGuid>
-    <RootNamespace>IziHardGames.UnityApps.Constructor</RootNamespace>
+    <RootNamespace>IziHardGames.UnityApps</RootNamespace>
     <Authors>Tran Ngoc Anh</Authors>
     <Company>IziHardGames</Company>
     <UnityEngine>true</UnityEngine>
@@ -26,30 +26,33 @@
   </ItemGroup>-->
 
   <ItemGroup>
+    <PackageReference Include="IziHardGames.UnityApps.Attributes" PrivateAssets="All" />
+    <PackageReference Include="IziHardGames.UnityApps.Contracts" PrivateAssets="All" />
     <PackageReference Include="IziHardGames.Refs.UnityEngine6000" PrivateAssets="All" />
     <PackageReference Include="IziHardGames.IziUnityEditor" PrivateAssets="All" />
-    <PackageReference Include="IziHardGames.UnityApps.Attributes" PrivateAssets="All" />
     <PackageReference Include="IziHardGames.DependencyInjection.Contracts" PrivateAssets="All" />
+    <PackageReference Include="IziHardGames.DependencyInjection.Unity" PrivateAssets="All" />
     
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" PrivateAssets="All"/>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" PrivateAssets="All" />
+    <PackageReference Include="IziHardGames.EventSourcing.Contracts" PrivateAssets="All" />
   </ItemGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\IziHardGames.UnityApps.Contracts\IziHardGames.UnityApps.Contracts.csproj" />
+    <ProjectReference Include="..\IziHardGames.UnityApps.Application\IziHardGames.UnityApps.Application.csproj" />
     <ProjectReference Include="..\IziHardGames.UnityApps.Domain\IziHardGames.UnityApps.Domain.csproj" />
   </ItemGroup>
   
   <ItemGroup>
-    <None Update="Components\AppBuilderMono.cs.meta">
+    <None Update="Constructor\Components\AppBuilderMono.cs.meta">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Components\BootstrapMono.cs.meta">
+    <None Update="Constructor\Components\BootstrapMono.cs.meta">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Components\BootstrapMonoAdapter.cs.meta">
+    <None Update="Constructor\Components\BootstrapMonoAdapter.cs.meta">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Components\IziBootstrap.cs.meta">
+    <None Update="Constructor\Components\IziBootstrap.cs.meta">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

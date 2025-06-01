@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ProjectGuid>7bb2301b-7c0b-4ba4-bae2-6d1130e19464</ProjectGuid>
+    <RootNamespace>IziHardGames.DependencyInjection</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <NuspecFile>IziHardGames.DependencyInjection.Unity.nuspec</NuspecFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" PrivateAssets="All" />
+    <PackageReference Include="IziHardGames.Refs.UnityEngine6000" PrivateAssets="All" />
+    <PackageReference Include="IziHardGames.DependencyInjection.Contracts" PrivateAssets="All" />
+    <PackageReference Include="IziHardGames.EventSourcing.Contracts" PrivateAssets="All" />
+  </ItemGroup>
+</Project>

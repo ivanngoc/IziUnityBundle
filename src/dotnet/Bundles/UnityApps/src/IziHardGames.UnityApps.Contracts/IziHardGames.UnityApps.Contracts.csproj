@@ -6,5 +6,8 @@
     <RootNamespace>IziHardGames.UnityApps</RootNamespace>
     <ProjectGuid>945aa520-2009-47b8-bc72-3439c819ae67</ProjectGuid>
   </PropertyGroup>
-
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <NuspecFile>IziHardGames.UnityApps.Contracts.nuspec</NuspecFile>
+  </PropertyGroup>
 </Project>

@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <ProjectGuid>2c7317de-7273-4fa7-90e9-0add98fa6019</ProjectGuid>
+    <RootNamespace>IziHardGames.UnityApps.Scenes</RootNamespace>
+    <Authors>Tran Ngoc Anh</Authors>
+    <Company>IziHardGames</Company>
+    <Author>Tran Ngoc Anh</Author>
+  </PropertyGroup>
+</Project>

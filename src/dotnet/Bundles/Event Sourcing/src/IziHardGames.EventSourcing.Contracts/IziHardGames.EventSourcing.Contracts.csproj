@@ -4,6 +4,7 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <Nullable>enable</Nullable>
     <ProjectGuid>781c2141-13b5-4655-816f-a7bf1eb0341a</ProjectGuid>
+    <RootNamespace>IziHardGames.EventSourcing.Contracts</RootNamespace>
   </PropertyGroup>
   
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">

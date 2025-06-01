@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <ProjectGuid>{D5992F84-2949-488C-B196-CBE15F351BED}</ProjectGuid>
+    <RootNamespace>IziHardGames</RootNamespace>
+    <Authors>Tran Ngoc Anh</Authors>
+    <Company>IziHardGames</Company>
+    <Author>Tran Ngoc Anh</Author>
+  </PropertyGroup>
+  <!--<ItemGroup>
+    <Reference Include="Unity.Collections">
+      <HintPath>..\..\..\Packages\Unity3d Dlls\Unity.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Entities">
+      <HintPath>..\..\..\Packages\Unity3d Dlls\Unity.Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Entities.Hybrid">
+      <HintPath>..\..\..\Packages\Unity3d Dlls\Unity.Entities.Hybrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Scenes">
+      <HintPath>..\..\..\Packages\Unity3d Dlls\Unity.Scenes.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\Packages\Unity3d Dlls\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>-->
+
+
+  <ItemGroup>
+    <PackageReference Include="IziHardGames.Refs.UnityEngine6000" PrivateAssets="All" />
+  </ItemGroup>
+</Project>

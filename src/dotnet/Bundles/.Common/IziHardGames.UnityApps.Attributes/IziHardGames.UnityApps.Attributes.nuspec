@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>IziHardGames.UnityApps.Attributes</id>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
     <authors>Tran Ngoc Anh</authors>
     <description>A brief description of your package.</description>
     <tags>Exception Error Log</tags>

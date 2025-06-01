@@ -1,4 +1,5 @@
 using System;
+using IziHardGames.UnityApps.Contracts.Identities;
 
 namespace IziHardGames.NamespaceWrappers
 {
@@ -34,7 +35,7 @@ namespace IziHardGames.Core
 	public interface IAsignableWithIndex : IAsignable
 	{
 		public int Index { get; set; }
-		public void Asign<T>(T data, int index) where T : IUnique;
+		public void Asign<T>(T data, int index) where T : IId<int>;
 	}
 	/// <summary>
 	/// Можно привязать объект 
@@ -59,13 +60,6 @@ namespace IziHardGames.Core
 	{
 
 	}
-	/// <summary>
-	/// Объект имеет идентификатор. В пределах одного типа может быть несколько экземлпяров
-	/// </summary>
-	public interface IUnique
-	{
-		int Id { get; set; }
-	}
 
 
 	public interface IOrderable
@@ -76,11 +70,6 @@ namespace IziHardGames.Core
 	public interface IContinuationState
 	{
 		bool IsReady { get; }
-	}
-	
-	public interface IDeinitializable
-	{
-		void InitilizeReverse();
 	}
 	/// <summary>
 	/// Помечает тип как имеющий основной метод, выполняющий главную функцию, с названием Execute. Аналогично функции Main()
@@ -118,11 +107,6 @@ namespace IziHardGames.Core
 	public interface IExcluded
 	{
 
-	}
-
-	public interface IGUID
-	{
-		public int Guid { get; set; }
 	}
 
 	public interface IFuncBool

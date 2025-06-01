@@ -16,12 +16,19 @@ namespace IziHardGames.Geometry.Domain.Vectors
         West = 1 << 6,
         WestNorth = 1 << 7,
 
+        Top = North,
+        RightTop = EastNorth,
+        Right = East,
+        RightBot = EastSouth,
+        Bot = South,
+        LeftBot = WestSouth,
+        Left = West,
+        LeftTop = WestNorth,
+
         Crest = North | East | South | West,
         Cross = EastNorth | EastSouth | WestSouth | WestNorth,
         Forward = North,
         Backward = South,
-        Left = West,
-        Right = East,
 
         HemisphereTop = West | WestNorth | North | EastNorth | East,
         HemisphereBot = West | WestSouth | South | EastSouth | East,

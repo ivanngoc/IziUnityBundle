@@ -8,15 +8,15 @@ namespace IziHardGames.DependencyInjection.Promises
         where T : class
     {
         private T? value;
-        public T? Value => value;
+        public T Value => value ?? throw new NullReferenceException();
 
         public void SetValueWithoutNotify()
         {
             throw new System.NotImplementedException();
         }
-        public void SetValue()
+        public void SetValue(T value)
         {
-            throw new System.NotImplementedException();
+            this.value = value;
         }
         public void Dispose()
         {

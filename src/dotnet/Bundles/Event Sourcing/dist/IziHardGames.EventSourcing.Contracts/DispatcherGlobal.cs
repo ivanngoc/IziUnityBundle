@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using IziHardGames.EventSourcing.Contracts;
+using IziHardGames.EventSourcing.Contracts.Events;
+using IziHardGames.EventSourcing.Contracts.Handlers;
 
 namespace IziHardGames.EventSourcing.Dist.Unity
 {

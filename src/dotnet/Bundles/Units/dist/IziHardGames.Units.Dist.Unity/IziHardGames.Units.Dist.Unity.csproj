@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <RootNamespace>IziHardGames.GameApps.Units</RootNamespace>
+    <ProjectGuid>69b38dfd-760d-497e-8bf0-81aa79c10c6f</ProjectGuid>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\IziHardGames.Units.Contracts\IziHardGames.Units.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="IziHardGames.Units.Contracts.dll.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziHardGames.Units.Contracts.pdb.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziHardGames.Units.Contracts.xml.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziHardGames.Units.Dist.Unity.dll.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziHardGames.Units.Dist.Unity.pdb.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziHardGames.Units.Dist.Unity.xml.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="package.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="package.json.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

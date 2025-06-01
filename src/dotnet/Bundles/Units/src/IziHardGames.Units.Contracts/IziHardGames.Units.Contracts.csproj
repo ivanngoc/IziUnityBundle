@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <RootNamespace>IziHardGames.GameApps.Units</RootNamespace>
+    <ProjectGuid>a03bb495-fb9f-435d-83c4-3dc51d903e4d</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <NuspecFile>IziHardGames.Units.Contracts.nuspec</NuspecFile>
+  </PropertyGroup>
+</Project>

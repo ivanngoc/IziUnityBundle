@@ -4,25 +4,27 @@
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
     <CentralPackageVersionOverrideEnabled>true</CentralPackageVersionOverrideEnabled>
     <NoWarn>CS1591</NoWarn>
+    <WarningsNotAsErrors>CS1587;CS1570</WarningsNotAsErrors>
   </PropertyGroup>
   <ItemGroup>
-    <PackageVersion Include="IziHardGames.DependencyInjection.Contracts" Version="0.0.7" />
+    <PackageVersion Include="IziHardGames.UnityApps.Contracts" Version="0.0.4" />
+    <PackageVersion Include="IziHardGames.UnityApps.Attributes" Version="0.0.3" />
+    <PackageVersion Include="IziHardGames.UnityApps.Domain" Version="0.0.3" />
+    <PackageVersion Include="IziHardGames.UnityTypes" Version="0.0.1" />
+    <PackageVersion Include="IziHardGames.DependencyInjection.Contracts" Version="0.0.11" />
+    <PackageVersion Include="IziHardGames.DependencyInjection.Unity" Version="0.0.5" />
     <PackageVersion Include="IziHardGames.IziUnityEditor" Version="0.0.2" />
     <PackageVersion Include="IziHardGames.Binary" Version="0.0.2" />
     <PackageVersion Include="IziHardGames.Pools.Contracts" Version="0.0.6" />
     <PackageVersion Include="IziHardGames.Commands.Contracts" Version="0.0.2" />
-    <PackageVersion Include="IziHardGames.UnityApps.Attributes" Version="0.0.2" />
-    <PackageVersion Include="IziHardGames.Geometry" Version="0.0.28" />
-    <PackageVersion Include="IziHardGames.EventSourcing.Contracts" Version="0.0.3" />
+    <PackageVersion Include="IziHardGames.Geometry" Version="0.0.29" />
+    <PackageVersion Include="IziHardGames.EventSourcing.Contracts" Version="0.0.5" />
     <PackageVersion Include="IziHardGames.ValueObjects.Contracts" Version="0.0.1" />
-    <PackageVersion Include="IziHardGames.UnityTypes" Version="0.0.1" />
     <PackageVersion Include="IziHardGames.CustomTypesForUnity" Version="0.0.1" />
     <PackageVersion Include="IziHardGames.DotNetPrimitives" Version="0.0.1" />
     <PackageVersion Include="IziHardGames.Refs.UnityEngine6000" Version="1.0.1" />
     <PackageVersion Include="IziHardGames.Refs.UnityEditor6000" Version="1.0.0" />
     <PackageVersion Include="IziHardGames.Refs.InputSystem" Version="1.11.2" />
-    
-    
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.5" />
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="9.0.5" />
   </ItemGroup>

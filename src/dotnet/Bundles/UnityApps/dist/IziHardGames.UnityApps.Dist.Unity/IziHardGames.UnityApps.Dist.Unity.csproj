@@ -7,13 +7,26 @@
 
   <ItemGroup>
     <!--<ProjectReference Include="..\..\src\IziHardGames.UnityApps.Constructor.Editor\IziHardGames.UnityApps.Constructor.Editor.csproj" />-->
+    <ProjectReference Include="..\..\src\IziHardGames.UnityApps.Application\IziHardGames.UnityApps.Application.csproj" />
     <ProjectReference Include="..\..\src\IziHardGames.UnityApps.Constructor\IziHardGames.UnityApps.Constructor.csproj" />
-    <ProjectReference Include="..\..\src\IziHardGames.UnityApps.Contracts\IziHardGames.UnityApps.Contracts.csproj" />
     <ProjectReference Include="..\..\src\IziHardGames.UnityApps.Domain\IziHardGames.UnityApps.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="IziHardGames.UnityApps.Contracts" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="Components.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziHardGames.UnityApps.Application.dll.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziHardGames.UnityApps.Application.pdb.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziHardGames.UnityApps.Application.xml.meta">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="IziHardGames.UnityApps.Constructor.dll.meta">

@@ -78,7 +78,8 @@ namespace IziHardGames.DependencyInjection.Implementations
         {
             this.serviceProvider = serviceProvider;
 
-            var serviceCollection = serviceProvider.GetService(typeof(IEnumerable<ServiceDescriptor>)) as IEnumerable<ServiceDescriptor>;
+            var serv = serviceProvider.GetRequiredService(typeof(IEnumerable<ServiceDescriptor>));
+            var serviceCollection = serv as IEnumerable<ServiceDescriptor> ?? throw new InvalidCastException(serv.GetType().AssemblyQualifiedName);
 
             foreach (var descriptor in serviceCollection)
             {
@@ -106,9 +107,10 @@ namespace IziHardGames.DependencyInjection.Implementations
             throw new NotImplementedException();
         }
 
-        public T GetServiceAs<T>()
+
+        public T GetServiceAs<T>() where T : notnull
         {
-            return serviceProvider.GetService<T>();
+            return serviceProvider.GetRequiredService<T>();
         }
 
         public T GetServiceAs<T>(Guid guid)

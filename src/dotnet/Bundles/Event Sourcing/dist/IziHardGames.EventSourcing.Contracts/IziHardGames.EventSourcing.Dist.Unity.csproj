@@ -7,10 +7,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\src\IziHardGames.EventSourcing.Application\IziHardGames.EventSourcing.Application.csproj" />
     <ProjectReference Include="..\..\src\IziHardGames.EventSourcing.Contracts\IziHardGames.EventSourcing.Contracts.csproj" />
+    <ProjectReference Include="..\..\src\IziHardGames.EventSourcing.Mono\IziHardGames.EventSourcing.Mono.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="IziHardGames.EventSourcing.Application.dll.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziHardGames.EventSourcing.Application.pdb.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziHardGames.EventSourcing.Application.xml.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="IziHardGames.EventSourcing.Contracts.dll.meta">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

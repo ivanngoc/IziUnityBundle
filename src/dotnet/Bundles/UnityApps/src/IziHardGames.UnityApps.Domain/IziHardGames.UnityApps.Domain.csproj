@@ -6,15 +6,22 @@
     <RootNamespace>IziHardGames.UnityApps</RootNamespace>
     <ProjectGuid>12cb29e8-7a8e-4472-a56c-6fcac21433cd</ProjectGuid>
   </PropertyGroup>
-
+  
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <NuspecFile>IziHardGames.UnityApps.Domain.nuspec</NuspecFile>
+  </PropertyGroup>
+  
   <ItemGroup>
+    <PackageReference Include="IziHardGames.UnityApps.Contracts" PrivateAssets="All" />
     <PackageReference Include="IziHardGames.DependencyInjection.Contracts" PrivateAssets="All" />
     <PackageReference Include="IziHardGames.IziUnityEditor" PrivateAssets="All" />
+    <PackageReference Include="IziHardGames.EventSourcing.Contracts" PrivateAssets="All" />
 
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" PrivateAssets="All" />
   </ItemGroup>
-
+  
   <ItemGroup>
-    <ProjectReference Include="..\IziHardGames.UnityApps.Contracts\IziHardGames.UnityApps.Contracts.csproj" />
+    <Folder Include="Domain\Commands\" />
   </ItemGroup>
 </Project>

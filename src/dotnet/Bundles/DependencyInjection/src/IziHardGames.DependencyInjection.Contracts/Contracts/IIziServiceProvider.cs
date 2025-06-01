@@ -9,7 +9,7 @@ namespace IziHardGames.DependencyInjection.Contracts
     {
         object? GetService(Type type);
         object? GetService(Guid guid);
-        T GetServiceAs<T>();
+        T GetServiceAs<T>() where T: notnull;
         T GetServiceAs<T>(Guid guid);
 
         object GetSingleton(Type type);

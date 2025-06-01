@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ProjectGuid>9d0512a4-e608-43e4-aceb-2ab8314c6e2d</ProjectGuid>
+    <RootNamespace>IziHardGames.EventSourcing</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IziHardGames.Refs.UnityEngine6000" PrivateAssets="all" />
+  </ItemGroup>
+</Project>

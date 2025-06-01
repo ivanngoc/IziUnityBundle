@@ -1,0 +1,69 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\IziHardGames.UnityApps.Scenes.Async\IziHardGames.UnityApps.Scenes.Async.csproj" />
+    <ProjectReference Include="..\..\src\IziHardGames.UnityApps.Scenes.Contracts\IziHardGames.UnityApps.Scenes.Contracts.csproj" />
+    <ProjectReference Include="..\..\src\IziHardGames.UnityApps.Scenes.Ecs\IziHardGames.UnityApps.Scenes.Ecs.csproj" />
+    <ProjectReference Include="..\..\src\IziHardGames.UnityApps.Scenes\IziHardGames.UnityApps.Scenes.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="IziHardGames.UnityApps.Scenes.Async.dll.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziHardGames.UnityApps.Scenes.Async.pdb.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziHardGames.UnityApps.Scenes.Async.xml.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziHardGames.UnityApps.Scenes.Contracts.dll.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziHardGames.UnityApps.Scenes.Contracts.pdb.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziHardGames.UnityApps.Scenes.Contracts.xml.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziHardGames.UnityApps.Scenes.Dist.Unity.dll.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziHardGames.UnityApps.Scenes.Dist.Unity.pdb.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziHardGames.UnityApps.Scenes.Dist.Unity.xml.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziHardGames.UnityApps.Scenes.dll.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziHardGames.UnityApps.Scenes.Ecs.dll.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziHardGames.UnityApps.Scenes.Ecs.pdb.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziHardGames.UnityApps.Scenes.Ecs.xml.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziHardGames.UnityApps.Scenes.pdb.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziHardGames.UnityApps.Scenes.xml.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="package.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="package.json.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

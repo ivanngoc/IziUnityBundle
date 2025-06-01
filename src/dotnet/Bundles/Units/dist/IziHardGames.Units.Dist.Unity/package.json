@@ -1,0 +1,13 @@
+{
+  "name": "com.izihardgames.units",
+  "version": "0.0.1",
+  "unity": "6000.0",
+  "unityRelease": "31f1",
+  "displayName": "Izi Units",
+  "description": "Example",
+  "keywords": [
+  ],
+  "dependencies": {
+
+  }
+}

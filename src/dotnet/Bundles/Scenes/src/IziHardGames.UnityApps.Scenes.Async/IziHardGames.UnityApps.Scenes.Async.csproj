@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <ProjectGuid>21dca0ef-a41f-4ae8-ac30-f6e187d8f47b</ProjectGuid>
+    <RootNamespace>IziHardGames</RootNamespace>
+    <Authors>Tran Ngoc Anh</Authors>
+    <Company>IziHardGames</Company>
+    <Author>Tran Ngoc Anh</Author>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="IziHardGames.Refs.UnityEngine6000" PrivateAssets="All" />
+  </ItemGroup>
+  
+  <!--<ItemGroup>
+    <ProjectReference Include="$(IZHG_ROOT)\com.izihardgames.app.abstractions.netstd21\Any\izhg.apps.abstractions.netstd21.csproj">
+      <Project>239298d4-8ee9-408d-902d-ed7a7801332d</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(IZHG_ROOT)\com.izihardgames.app.abstractions.unity\Any\izhg.apps.abstractions.unity.csproj">
+      <Project>a3cdf3a1-a3e2-4b4e-b157-665e9a2546d4</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(IZHG_ROOT)\com.izihardgames.async.unity\Any\izhg.async.unity.asmdef.csproj">
+      <Project>15fa5aff-464a-423f-a018-8584288a1292</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(IZHG_ROOT)\com.izihardgames.extensions.unity\izhg.extensions.unity.csproj">
+      <Project>6751f125-a038-4b06-aa1b-74db7ebd61aa</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(IZHG_ROOT)\com.izihardgames.extensions.unity\Runtime\IziHardGames.Libs.Engine.Extensions.asmdef.csproj">
+      <Project>4c31f516-8713-47c8-9f75-adac4bed6497</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(IZHG_ROOT)\com.izihardgames.tasking.async.netstd21\Any\izhg.async.netstd21.asmdef.csproj">
+      <Project>3825a92d-3c85-42f4-83ee-5a6d2b4dba70</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(IZHG_MODULES)\com.izihardgames.attributes.netstd21.meta\package\izhg.attributes.csproj">
+      <Project>cf79157e-ecbc-4b8e-a1f3-41d971858fc6</Project>
+    </ProjectReference>
+  </ItemGroup>-->
+</Project>
