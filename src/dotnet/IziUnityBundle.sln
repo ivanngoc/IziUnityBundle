@@ -130,9 +130,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dist", "dist", "{54CD6015-2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{77B89680-CFE1-4120-BAD9-DF5A42532CC4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IziHardGames.Libs.Engine.TrajectoryMoving.asmdef", "Bundles\IziMoving\src\Trajectory Moving\IziHardGames.Libs.Engine.TrajectoryMoving.asmdef.csproj", "{0551F0F8-7DD4-4766-AAD6-2A1575B91E76}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IziHardGames.IziMoving.Trajectory", "Bundles\IziMoving\src\Trajectory Moving\IziHardGames.IziMoving.Trajectory.csproj", "{0551F0F8-7DD4-4766-AAD6-2A1575B91E76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IziHardGames.Moving.Contracts", "Bundles\IziMoving\src\IziHardGames.Moving.Contracts\IziHardGames.Moving.Contracts.csproj", "{09D578AE-B64B-4B79-9538-40DD254F749E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IziHardGames.IziMoving.Contracts", "Bundles\IziMoving\src\IziHardGames.Moving.Contracts\IziHardGames.IziMoving.Contracts.csproj", "{09D578AE-B64B-4B79-9538-40DD254F749E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Commands", "Commands", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
@@ -225,6 +225,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IziHardGames.Units.Dist.Unity", "Bundles\Units\dist\IziHardGames.Units.Dist.Unity\IziHardGames.Units.Dist.Unity.csproj", "{180743ED-8CBE-4529-9515-E2F60F500BED}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IziHardGames.IziMoving.RVO2", "Bundles\IziMoving\src\IziHardGames.IziMoving.RVO2\IziHardGames.IziMoving.RVO2.csproj", "{5864A9CE-410B-470C-8FA6-9D93A4FCBBFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IziHardGames.IziMoving.Dist.Unity", "Bundles\IziMoving\dist\IziHardGames.IziMoving.Dist.Unity\IziHardGames.IziMoving.Dist.Unity.csproj", "{EA6F142B-59C3-40FE-A6A9-ACCA722F8E18}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{5953EB33-4D5B-447A-8CEB-27CDC42B2255}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IziHardGames.IziMoving.RVO2.UnitTests", "Bundles\IziMoving\tests\IziHardGames.IziMoving.RVO2.UnitTests\IziHardGames.IziMoving.RVO2.UnitTests.csproj", "{3FE93F20-0D7D-4B09-B79D-16AA36F10CF5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -575,6 +581,18 @@ Global
 		{5864A9CE-410B-470C-8FA6-9D93A4FCBBFD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5864A9CE-410B-470C-8FA6-9D93A4FCBBFD}.Unity|Any CPU.ActiveCfg = Debug|Any CPU
 		{5864A9CE-410B-470C-8FA6-9D93A4FCBBFD}.Unity|Any CPU.Build.0 = Debug|Any CPU
+		{EA6F142B-59C3-40FE-A6A9-ACCA722F8E18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA6F142B-59C3-40FE-A6A9-ACCA722F8E18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA6F142B-59C3-40FE-A6A9-ACCA722F8E18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA6F142B-59C3-40FE-A6A9-ACCA722F8E18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA6F142B-59C3-40FE-A6A9-ACCA722F8E18}.Unity|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA6F142B-59C3-40FE-A6A9-ACCA722F8E18}.Unity|Any CPU.Build.0 = Debug|Any CPU
+		{3FE93F20-0D7D-4B09-B79D-16AA36F10CF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FE93F20-0D7D-4B09-B79D-16AA36F10CF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FE93F20-0D7D-4B09-B79D-16AA36F10CF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FE93F20-0D7D-4B09-B79D-16AA36F10CF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FE93F20-0D7D-4B09-B79D-16AA36F10CF5}.Unity|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FE93F20-0D7D-4B09-B79D-16AA36F10CF5}.Unity|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -682,6 +700,9 @@ Global
 		{F9F79177-3F96-4867-B149-F6346A852A51} = {D7C97218-0C69-46EC-A0D0-C5FBDF28DFFD}
 		{180743ED-8CBE-4529-9515-E2F60F500BED} = {83E01DBB-CF6B-404C-92F6-164D6A8BBC22}
 		{5864A9CE-410B-470C-8FA6-9D93A4FCBBFD} = {77B89680-CFE1-4120-BAD9-DF5A42532CC4}
+		{EA6F142B-59C3-40FE-A6A9-ACCA722F8E18} = {54CD6015-29EA-482D-A89F-87EC1F1E5FE9}
+		{5953EB33-4D5B-447A-8CEB-27CDC42B2255} = {DFEF7932-1FF7-443B-95E5-A0AE60937496}
+		{3FE93F20-0D7D-4B09-B79D-16AA36F10CF5} = {5953EB33-4D5B-447A-8CEB-27CDC42B2255}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CDAF4F07-1F84-4878-9E13-C5A68106DA8E}

@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <ProjectName>IziHardGames.Libs.Engine.TrajectoryMoving.asmdef</ProjectName>
     <ProjectGuid>0551f0f8-7dd4-4766-aad6-2a1575b91e76</ProjectGuid>
-    <RootNamespace>IziHardGames</RootNamespace>
+    <RootNamespace>IziHardGames.IziMoving.Trajectory</RootNamespace>
     <Authors>Tran Ngoc Anh</Authors>
     <Company>IziHardGames</Company>
     <Description></Description>

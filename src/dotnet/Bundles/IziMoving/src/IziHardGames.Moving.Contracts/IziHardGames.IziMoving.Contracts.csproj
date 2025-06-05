@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <RootNamespace>IziHardGames.IziMoving.Contracts</RootNamespace>
+    <ProjectGuid>459188b6-623f-4f6b-bf34-77a2ee7411fb</ProjectGuid>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IziHardGames.DependencyInjection.Contracts" PrivateAssets="all" />
+  </ItemGroup>
+</Project>

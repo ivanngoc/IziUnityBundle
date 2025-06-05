@@ -1,0 +1,13 @@
+{
+  "name": "com.izihardgames.moving",
+  "version": "0.0.1",
+  "unity": "6000.0",
+  "unityRelease": "31f1",
+  "displayName": "Izi Moving",
+  "description": "Example",
+  "keywords": [
+  ],
+  "dependencies": {
+
+  }
+}

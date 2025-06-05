@@ -3,10 +3,24 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <Nullable>enable</Nullable>
+    <RootNamespace>IziHardGames.IziMoving.RVO2</RootNamespace>
+    <ProjectGuid>933b6425-a39a-4d6c-aaa6-49660ae2e7fb</ProjectGuid>
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="refs\v2\Agent.cs.v2" />
+    <Compile Include="refs\v2\KdTree.cs.v2" />
+    <Compile Include="refs\v2\Line.cs.v2" />
+    <Compile Include="refs\v2\Obstacle.cs.v2" />
+    <Compile Include="refs\v2\RVOMath.cs.v2" />
+    <Compile Include="refs\v2\Simulator.cs.v2" />
+    <Compile Include="refs\v2\Vector2.cs.v2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Domain\Entities\" />
+    <Folder Include="Application\" />
+    <Compile Remove="refs\v2\*" />
   </ItemGroup>
 
 </Project>
