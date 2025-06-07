@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using RVO;
 using UnityEngine;
 
@@ -8,7 +9,9 @@ namespace IziHardGames.IziMoving.Mono.Components
     public class RefRvo2System : MonoBehaviour
     {
         [SerializeField] private List<AgentRvo2> agents = new List<AgentRvo2>();
+        [SerializeField] private List<ObstacleRvo2> obstacles = new List<ObstacleRvo2>();
         [SerializeField] private int countChanges;
+        [SerializeField] private int countChangesObstacles;
         [SerializeField] int maxNeighbours = 10;
         /// <summary>
         /// Как рано происходит обход препятствия
@@ -18,12 +21,20 @@ namespace IziHardGames.IziMoving.Mono.Components
         [SerializeField] int timeScale = 1;
         [SerializeField] float timeStep = 1;
         private System.Random? random;
+        private Simulator simulator = null!;
+
+        private void Awake()
+        {
+            simulator = new Simulator();
+        }
 
         public void Initilize()
         {
+            simulator = new Simulator();
             this.random = new System.Random();
-            Simulator.Instance.Clear();
+            RebuildSimulation();
         }
+
         public void AddAgent(UnityEngine.Object o)
         {
             Debug.Log(o.GetType().AssemblyQualifiedName);
@@ -38,13 +49,29 @@ namespace IziHardGames.IziMoving.Mono.Components
             countChanges++;
             agents.Add(agent);
         }
+        public void AddObstacle(ObstacleRvo2 obstacle)
+        {
+            countChanges++;
+            countChangesObstacles++;
+            obstacles.Add(obstacle);
+        }
 
-        private void AddAgentToSimulation(AgentRvo2 agent)
+        private void AddToSimulationObstacle(ObstacleRvo2 item)
+        {
+            var result = simulator.addObstacle(item.shape.Select(x => new RVO.Vector2(x.x + item.Center.x, x.z + item.Center.z)).ToArray());
+            if (result < 0)
+            {
+                throw new InvalidOperationException();
+            }
+        }
+
+        private void AddToSimulationAgent(AgentRvo2 agent)
         {
             var pos = agent.Position;
-            var id = Simulator.Instance.addAgent(new RVO.Vector2(pos.x, pos.z), agent.RadiusAvoidance, maxNeighbours, timeHorizon, timeHorizonObst, agent.Radius, agent.Speed, default);
+            var id = simulator.addAgent(new RVO.Vector2(pos.x, pos.z), agent.RadiusAvoidance, maxNeighbours, timeHorizon, timeHorizonObst, agent.Radius, agent.Speed, default);
             agent.Bind(id, this);
         }
+
 
         public void RemoveAgent(AgentRvo2 agent)
         {
@@ -52,6 +79,14 @@ namespace IziHardGames.IziMoving.Mono.Components
             countChanges++;
             agent.Dispose();
         }
+
+
+        public void RemoveObStacle(ObstacleRvo2 obstacle)
+        {
+            countChanges++;
+            obstacles.Remove(obstacle);
+        }
+
         public void Step(float deltaTime)
         {
             if (countChanges > 0)
@@ -60,7 +95,7 @@ namespace IziHardGames.IziMoving.Mono.Components
                 countChanges = 0;
             }
 
-            Simulator.Instance.setTimeStep(deltaTime);
+            simulator.setTimeStep(deltaTime);
 
             if (random == null) throw new NullReferenceException();
 
@@ -80,16 +115,16 @@ namespace IziHardGames.IziMoving.Mono.Components
                 float angle = (float)random.NextDouble() * 2.0f * (float)Math.PI;
                 float dist = (float)random.NextDouble() * 0.0001f;
                 velPref = velPref + dist * new RVO.Vector2((float)Math.Cos(angle), (float)Math.Sin(angle));
-                Simulator.Instance.setAgentPrefVelocity(agent.Id, velPref);
+                simulator.setAgentPrefVelocity(agent.Id, velPref);
 
-                //Simulator.Instance.setAgentPrefVelocity(agent.Id, velPref);
+                //simulator.setAgentPrefVelocity(agent.Id, velPref);
             }
 
-            Simulator.Instance.doStep();
+            simulator.doStep();
 
             foreach (var agent in agents)
             {
-                var pos = Simulator.Instance.getAgentPosition(agent.Id);
+                var pos = simulator.getAgentPosition(agent.Id);
                 if (agent.SetPosition(new Vector3(pos.x(), default, pos.y())))
                 {
                     // reached goal but keep in simulation as obstacle
@@ -99,12 +134,23 @@ namespace IziHardGames.IziMoving.Mono.Components
 
         private void RebuildSimulation()
         {
-            Simulator.Instance.Clear();
+            simulator.Clear();
+
+            foreach (var obs in obstacles)
+            {
+                AddToSimulationObstacle(obs);
+            }
 
             foreach (var agent in agents)
             {
-                AddAgentToSimulation(agent);
+                AddToSimulationAgent(agent);
             }
+
+            //if (countChangesObstacles > 0)
+            //{
+            simulator.processObstacles();
+            //    countChangesObstacles = 0;
+            //}
         }
         private void FixedUpdate()
         {

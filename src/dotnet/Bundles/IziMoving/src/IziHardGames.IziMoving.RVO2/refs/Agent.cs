@@ -55,7 +55,19 @@ namespace RVO
         internal float timeHorizon_ = 0.0f;
         internal float timeHorizonObst_ = 0.0f;
 
+
         private Vector2 newVelocity_;
+        private readonly Simulator simulator;
+
+        private Agent()
+        {
+
+        }
+
+        public Agent(Simulator simulator)
+        {
+            this.simulator = simulator;
+        }
 
         /**
          * <summary>Computes the neighbors of this agent.</summary>
@@ -64,14 +76,14 @@ namespace RVO
         {
             obstacleNeighbors_.Clear();
             float rangeSq = RVOMath.sqr(timeHorizonObst_ * maxSpeed_ + radius_);
-            Simulator.Instance.kdTree_.computeObstacleNeighbors(this, rangeSq);
+            simulator.kdTree_.computeObstacleNeighbors(this, rangeSq);
 
             agentNeighbors_.Clear();
 
             if (maxNeighbors_ > 0)
             {
                 rangeSq = RVOMath.sqr(neighborDist_);
-                Simulator.Instance.kdTree_.computeAgentNeighbors(this, ref rangeSq);
+                simulator.kdTree_.computeAgentNeighbors(this, ref rangeSq);
             }
         }
 
@@ -397,7 +409,7 @@ namespace RVO
                 else
                 {
                     /* Collision. Project on cut-off circle of time timeStep. */
-                    float invTimeStep = 1.0f / Simulator.Instance.timeStep_;
+                    float invTimeStep = 1.0f / simulator.timeStep_;
 
                     /* Vector from cutoff center to relative velocity. */
                     Vector2 w = relativeVelocity - invTimeStep * relativePosition;
@@ -495,7 +507,7 @@ namespace RVO
         internal void update()
         {
             velocity_ = newVelocity_;
-            position_ += velocity_ * Simulator.Instance.timeStep_;
+            position_ += velocity_ * simulator.timeStep_;
         }
 
         /**

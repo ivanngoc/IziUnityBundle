@@ -40,59 +40,8 @@ namespace RVO
     /**
      * <summary>Defines the simulation.</summary>
      */
-    public class Simulator
+    public partial class Simulator
     {
-        /**
-         * <summary>Defines a worker.</summary>
-         */
-        private class Worker
-        {
-            private readonly ManualResetEvent doneEvent_;
-            private readonly int end_;
-            private readonly int start_;
-
-            /**
-             * <summary>Constructs and initializes a worker.</summary>
-             *
-             * <param name="start">Start.</param>
-             * <param name="end">End.</param>
-             * <param name="doneEvent">Done event.</param>
-             */
-            internal Worker(int start, int end, ManualResetEvent doneEvent)
-            {
-                start_ = start;
-                end_ = end;
-                doneEvent_ = doneEvent;
-            }
-
-            /**
-             * <summary>Performs a simulation step.</summary>
-             */
-            internal void step(object _)
-            {
-                for (int agentNo = start_; agentNo < end_; ++agentNo)
-                {
-                    Simulator.Instance.agents_[agentNo].computeNeighbors();
-                    Simulator.Instance.agents_[agentNo].computeNewVelocity();
-                }
-
-                doneEvent_.Set();
-            }
-
-            /**
-             * <summary>updates the two-dimensional position and
-             * two-dimensional velocity of each agent.</summary>
-             */
-            internal void update(object _)
-            {
-                for (int agentNo = start_; agentNo < end_; ++agentNo)
-                {
-                    Simulator.Instance.agents_[agentNo].update();
-                }
-
-                doneEvent_.Set();
-            }
-        }
 
         internal IList<Agent> agents_;
         internal IList<Obstacle> obstacles_;
@@ -132,7 +81,7 @@ namespace RVO
                 return -1;
             }
 
-            Agent agent = new Agent();
+            Agent agent = new Agent(this);
             agent.id_ = agents_.Count;
             agent.maxNeighbors_ = defaultAgent_.maxNeighbors_;
             agent.maxSpeed_ = defaultAgent_.maxSpeed_;
@@ -183,7 +132,7 @@ namespace RVO
          */
         public int addAgent(Vector2 position, float neighborDist, int maxNeighbors, float timeHorizon, float timeHorizonObst, float radius, float maxSpeed, Vector2 velocity)
         {
-            Agent agent = new Agent();
+            Agent agent = new Agent(this);
             agent.id_ = agents_.Count;
             agent.maxNeighbors_ = maxNeighbors;
             agent.maxSpeed_ = maxSpeed;
@@ -262,7 +211,7 @@ namespace RVO
         {
             agents_ = new List<Agent>();
             defaultAgent_ = null;
-            kdTree_ = new KdTree();
+            kdTree_ = new KdTree(this);
             obstacles_ = new List<Obstacle>();
             globalTime_ = 0.0f;
             timeStep_ = 0.1f;
@@ -286,7 +235,7 @@ namespace RVO
                 for (int block = 0; block < workers_.Length; ++block)
                 {
                     doneEvents_[block] = new ManualResetEvent(false);
-                    workers_[block] = new Worker(block * getNumAgents() / workers_.Length, (block + 1) * getNumAgents() / workers_.Length, doneEvents_[block]);
+                    workers_[block] = new Worker(this, block * getNumAgents() / workers_.Length, (block + 1) * getNumAgents() / workers_.Length, doneEvents_[block]);
                 }
             }
 
@@ -686,7 +635,7 @@ namespace RVO
         {
             if (defaultAgent_ == null)
             {
-                defaultAgent_ = new Agent();
+                defaultAgent_ = new Agent(this);
             }
 
             defaultAgent_.maxNeighbors_ = maxNeighbors;
@@ -862,7 +811,7 @@ namespace RVO
         /**
          * <summary>Constructs and initializes a simulation.</summary>
          */
-        private Simulator()
+        public Simulator()
         {
             Clear();
         }

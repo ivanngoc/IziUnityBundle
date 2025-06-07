@@ -1,0 +1,13 @@
+{
+	"name": "com.izihardgames.object-pools",
+	"version": "0.0.1",
+	"unity": "6000.0",
+	"unityRelease": "31f1",
+	"displayName": "Izi Object Pools",
+	"description": "Example",
+	"keywords": [
+	],
+	"dependencies": {
+
+	}
+}
