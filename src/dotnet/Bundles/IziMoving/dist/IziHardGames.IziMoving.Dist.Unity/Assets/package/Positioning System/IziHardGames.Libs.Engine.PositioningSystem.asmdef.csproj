@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <ProjectName>IziHardGames.Libs.Engine.PositioningSystem.asmdef</ProjectName>
+    <ProjectGuid>4095d862-3152-4740-8694-7fb5a0573368</ProjectGuid>
+    <RootNamespace>IziHardGames</RootNamespace>
+    <Authors>Tran Ngoc Anh</Authors>
+    <Company>IziHardGames</Company>
+    <BaseOutputPath>C:\buildstemp\$(ProjectName)\$(Configuration)\bin</BaseOutputPath>
+    <BaseIntermediateOutputPath>C:\buildstemp\$(ProjectName)\$(Configuration)\obj</BaseIntermediateOutputPath>
+    <Description>
+    </Description>
+    <Author>Tran Ngoc Anh</Author>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\Unity3d Dlls\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(IZHG_ROOT)\com.izihardgames.app.abstractions.netstd21\Any\izhg.apps.abstractions.netstd21.csproj">
+      <Project>239298d4-8ee9-408d-902d-ed7a7801332d</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(IZHG_ROOT)\com.izihardgames.extensions.netstd21\izhg.extensions.netstd21.csproj">
+      <Project>9a40762f-aea1-43a4-869c-cb9582884a51</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(IZHG_ROOT)\com.izihardgames.pools.netstd21\Runtime\Any\izhg.pools.netstd21.asmdef.csproj">
+      <Project>706eeb85-5f98-44c4-bfb4-e929fc152544</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(IZHG_ROOT)\Quad Tile Graph\IziHardGames.Libs.NonEngine.Graph.QuadTile.asmdef.csproj">
+      <Project>3d795ba4-2986-4796-853d-451bb3f7d4fa</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(IZHG_ROOT)\Vectors (0)\IziHardGames.Libs.NonEngine.Vectors.asmdef.csproj">
+      <Project>784d81a3-9036-4f29-a2b2-361cd23e6db3</Project>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
