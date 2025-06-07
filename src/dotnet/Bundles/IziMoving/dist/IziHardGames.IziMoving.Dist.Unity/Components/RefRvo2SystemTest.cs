@@ -18,6 +18,12 @@ namespace IziHardGames.IziMoving.Mono.Components
         }
 
         [SerializeField] EType type;
+        [SerializeField] float neighborDist = 15f;
+        [SerializeField] int maxNeighbors = 10;
+        [SerializeField] float timeHorizon = 5.0f;
+        [SerializeField] float timeHorizonObst = 5.0f;
+        [SerializeField] float maxSpeed = 2f;
+        [SerializeField] float radius = 1.5f;
         [SerializeField] float timeScale = 1;
         [SerializeField] public GameObject? testPrefabAgent;
         [Header("Circle")]
@@ -35,6 +41,9 @@ namespace IziHardGames.IziMoving.Mono.Components
         {
             actions.Clear();
             simulator = new Simulator();
+            // Specify the default parameters for agents that are subsequently added.
+
+            simulator.setAgentDefaults(neighborDist, maxNeighbors, timeHorizon, timeHorizonObst, radius, maxSpeed, new Vector2(0.0f, 0.0f));
             switch (type)
             {
                 case EType.Block:
@@ -97,12 +106,11 @@ namespace IziHardGames.IziMoving.Mono.Components
 
                 simulator.setAgentPrefVelocity(i, goalVector);
 
-                /* Perturb a little to avoid deadlocks due to perfect symmetry. */
-                float angle = (float)random.NextDouble() * 2.0f * (float)Math.PI;
-                float dist = (float)random.NextDouble() * 0.0001f;
+                ///* Perturb a little to avoid deadlocks due to perfect symmetry. */
+                //float angle = (float)random.NextDouble() * 2.0f * MathF.PI;
+                //float dist = (float)random.NextDouble() * 0.0001f;
 
-                simulator.setAgentPrefVelocity(i, simulator.getAgentPrefVelocity(i) +
-                    dist * new Vector2((float)Math.Cos(angle), (float)Math.Sin(angle)));
+                //simulator.setAgentPrefVelocity(i, simulator.getAgentPrefVelocity(i) + dist * new Vector2((float)Math.Cos(angle), (float)Math.Sin(angle)));
             }
         }
 
@@ -111,7 +119,7 @@ namespace IziHardGames.IziMoving.Mono.Components
             /* Check if all agents have reached their goals. */
             for (int i = 0; i < simulator.getNumAgents(); ++i)
             {
-                if (RVOMath.absSq(simulator.getAgentPosition(i) - goals[i]) > 400.0f)
+                if (RVOMath.absSq(simulator.getAgentPosition(i) - goals[i]) > Time.deltaTime)
                 {
                     return false;
                 }
@@ -125,24 +133,13 @@ namespace IziHardGames.IziMoving.Mono.Components
         public void SetupTestScenarioCircle()
         {
             goals = new List<Vector2>();
-
-            /* Specify the global time step of the simulation. */
-            simulator.setTimeStep(0.25f);
-
             /*
-             * Specify the default parameters for agents that are subsequently
-             * added.
-             */
-            var rad = 1.5f;
-            simulator.setAgentDefaults(15.0f, 10, 10.0f, 10.0f, rad, 2.0f, new Vector2(0.0f, 0.0f));
-
-            /*
-             * Add agents, specifying their start position, and store their
-             * goals on the opposite side of the environment.
-             */
+            * Add agents, specifying their start position, and store their
+            * goals on the opposite side of the environment.
+            */
             for (int i = 0; i < countAgents; ++i)
             {
-                var id = simulator.addAgent((countAgents * rad) * new Vector2((float)Math.Cos(i * 2.0f * Math.PI / countAgents), (float)Math.Sin(i * 2.0f * Math.PI / countAgents)));
+                var id = simulator.addAgent((countAgents * radius) * new Vector2((float)Math.Cos(i * 2.0f * Math.PI / countAgents), (float)Math.Sin(i * 2.0f * Math.PI / countAgents)));
                 goals.Add(-simulator.getAgentPosition(i));
                 InitGameObject(id);
             }
@@ -154,11 +151,7 @@ namespace IziHardGames.IziMoving.Mono.Components
             goals = new List<Vector2>();
             /* Specify the global time step of the simulation. */
 
-            /*
-             * Specify the default parameters for agents that are subsequently
-             * added.
-             */
-            simulator.setAgentDefaults(15.0f, 10, 5.0f, 5.0f, 2.0f, 2.0f, new Vector2(0.0f, 0.0f));
+
 
             /*
              * Add agents, specifying their start position, and store their
