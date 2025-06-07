@@ -17,9 +17,11 @@ namespace IziHardGames.IziMoving.Mono.Components
             Circle,
         }
 
-        [SerializeField] float timeScale = 1;
         [SerializeField] EType type;
+        [SerializeField] float timeScale = 1;
         [SerializeField] public GameObject? testPrefabAgent;
+        [Header("Circle")]
+        [SerializeField] public int countAgents = 250;
 
         /* Store the goals of the agents. */
         private IList<Vector2>? goals;
@@ -41,7 +43,10 @@ namespace IziHardGames.IziMoving.Mono.Components
                         break;
                     }
                 case EType.Circle:
-                    break;
+                    {
+                        SetupTestScenarioCircle();
+                        break;
+                    }
                 default:
                     break;
             }
@@ -56,15 +61,17 @@ namespace IziHardGames.IziMoving.Mono.Components
                 case EType.Block:
                     {
                         /* Perform (and manipulate) the simulation. */
-                        if (!reachedGoal())
-                        {
-                            setPreferredVelocities();
-                            simulator.doStep();
-                        }
+
                         break;
                     }
                 case EType.Circle: break;
                 default: break;
+            }
+
+            if (!reachedGoal())
+            {
+                setPreferredVelocities();
+                simulator.doStep();
             }
 
             foreach (var action in actions)
@@ -117,7 +124,28 @@ namespace IziHardGames.IziMoving.Mono.Components
         [ContextMenu("Setup Test Scenario - Circle")]
         public void SetupTestScenarioCircle()
         {
+            goals = new List<Vector2>();
 
+            /* Specify the global time step of the simulation. */
+            simulator.setTimeStep(0.25f);
+
+            /*
+             * Specify the default parameters for agents that are subsequently
+             * added.
+             */
+            var rad = 1.5f;
+            simulator.setAgentDefaults(15.0f, 10, 10.0f, 10.0f, rad, 2.0f, new Vector2(0.0f, 0.0f));
+
+            /*
+             * Add agents, specifying their start position, and store their
+             * goals on the opposite side of the environment.
+             */
+            for (int i = 0; i < countAgents; ++i)
+            {
+                var id = simulator.addAgent((countAgents * rad) * new Vector2((float)Math.Cos(i * 2.0f * Math.PI / countAgents), (float)Math.Sin(i * 2.0f * Math.PI / countAgents)));
+                goals.Add(-simulator.getAgentPosition(i));
+                InitGameObject(id);
+            }
         }
 
         [ContextMenu("Setup Test Scenario - Block")]
