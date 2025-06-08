@@ -34,6 +34,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading;
+using IziHardGames.IziMoving.RVO2.Contracts;
 
 namespace RVO
 {
@@ -276,6 +277,11 @@ namespace RVO
         public int getAgentAgentNeighbor(int agentNo, int neighborNo)
         {
             return agents_[agentNo].agentNeighbors_[neighborNo].Value.id_;
+        }
+
+        public IRVOAgent<Line> GetAgent(int agentNo)
+        {
+            return agents_[agentNo];
         }
 
         /**

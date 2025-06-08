@@ -1,22 +1,10 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
-namespace IziHardGames.IziMoving.Mono.Components
+namespace IziHardGames.IziMoving.RVO2.MonoComponents
 {
-    public class ItemRvo2 : MonoBehaviour
-    {
-        public int Id => id;
-
-        [SerializeField] protected RefRvo2System? system;
-        [SerializeField] private int id;
-
-        public void Bind(int id, RefRvo2System system)
-        {
-            this.id = id;
-            this.system = system;
-        }
-    }
-
+    [Guid("c045915f-a4fe-413d-bdba-a7d4253344f4")]
     public class AgentRvo2 : ItemRvo2
     {
         public Vector3 PositionSimulated => positionSimulated;
@@ -35,7 +23,7 @@ namespace IziHardGames.IziMoving.Mono.Components
         /// <summary>
         /// на какой дистанции относительно радиуса будет считаться достигнутой цель. По умолчанию квадрат(1/5 от <see cref="radius"/>)
         /// </summary>
-        [SerializeField, Min(0.001f)] private float goalToleranceSqr = (0.5f * 0.2f) * (0.5f * 0.2f);
+        [SerializeField, Min(0.001f)] private float goalToleranceSqr = 0.5f * 0.2f * (0.5f * 0.2f);
         [SerializeField, Min(0.001f)] private float speed = 1;
         [SerializeField] private Vector3 destination;
         [SerializeField] private Vector3 positionSimulated;
@@ -56,13 +44,13 @@ namespace IziHardGames.IziMoving.Mono.Components
         /// <param name="perc01">Perc of <see cref="Radius"/></param>
         public void SetGoalTolerancePerc(float perc01)
         {
-            goalToleranceSqr = (radius * perc01) * (radius * perc01);
+            goalToleranceSqr = radius * perc01 * (radius * perc01);
         }
 
         public void SetDestination(Vector3 vector3)
         {
             reached = false;
-            this.destination = vector3;
+            destination = vector3;
         }
 
         public void Die()

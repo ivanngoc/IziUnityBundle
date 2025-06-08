@@ -33,17 +33,19 @@
 
 using System;
 using System.Collections.Generic;
+using IziHardGames.IziMoving.RVO2.Contracts;
 
 namespace RVO
 {
     /**
      * <summary>Defines an agent in the simulation.</summary>
      */
-    internal class Agent
+    internal class Agent : IRVOAgent<Line>
     {
+        public IEnumerable<Line> Lines { get; private set; }
         internal IList<KeyValuePair<float, Agent>> agentNeighbors_ = new List<KeyValuePair<float, Agent>>();
         internal IList<KeyValuePair<float, Obstacle>> obstacleNeighbors_ = new List<KeyValuePair<float, Obstacle>>();
-        internal IList<Line> orcaLines_ = new List<Line>();
+        internal readonly IList<Line> orcaLines_;
         internal Vector2 position_;
         internal Vector2 prefVelocity_;
         internal Vector2 velocity_;
@@ -58,14 +60,10 @@ namespace RVO
 
         private Vector2 newVelocity_;
         private readonly Simulator simulator;
-
-        private Agent()
-        {
-
-        }
-
         public Agent(Simulator simulator)
         {
+            orcaLines_ = new List<Line>();
+            Lines = orcaLines_;
             this.simulator = simulator;
         }
 

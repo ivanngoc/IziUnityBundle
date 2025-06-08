@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <Nullable>enable</Nullable>
-    <RootNamespace>IziHardGames.IziMoving.Mono</RootNamespace>
+    <RootNamespace>IziHardGames.IziMoving</RootNamespace>
     <ProjectGuid>24371c86-6c7e-4c07-be3f-394b642d669b</ProjectGuid>
   </PropertyGroup>
 
@@ -16,7 +16,10 @@
   <ItemGroup>
     <Compile Remove="Assets\*" />
     <None Include="Assets\**\*">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Components\**\*.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 

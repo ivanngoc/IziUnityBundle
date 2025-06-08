@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace IziHardGames.IziMoving.Mono.Components
+namespace IziHardGames.IziMoving.RVO2.MonoComponents
 {
     public class ObstacleRvo2 : ItemRvo2
     {

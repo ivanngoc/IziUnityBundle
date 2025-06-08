@@ -1,14 +1,15 @@
-﻿using RVO;
+﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using RVO;
 using UnityEditor;
 using UnityEngine;
-using Vector2 = RVO.Vector2;
 using Random = System.Random;
-using System;
-using System.Linq;
-using static UnityEditor.Progress;
-namespace IziHardGames.IziMoving.Mono.Components
+using Vector2 = RVO.Vector2;
+namespace IziHardGames.IziMoving.RVO2.MonoComponents.Debugging
 {
+    [Guid("ea2ebbcb-fbf5-4562-a738-bd106e9c39f4")]
     public class RefRvo2SystemTest : MonoBehaviour
     {
         internal enum EType
@@ -139,7 +140,7 @@ namespace IziHardGames.IziMoving.Mono.Components
             */
             for (int i = 0; i < countAgents; ++i)
             {
-                var id = simulator.addAgent((countAgents * radius) * new Vector2((float)Math.Cos(i * 2.0f * Math.PI / countAgents), (float)Math.Sin(i * 2.0f * Math.PI / countAgents)));
+                var id = simulator.addAgent(countAgents * radius * new Vector2((float)Math.Cos(i * 2.0f * Math.PI / countAgents), (float)Math.Sin(i * 2.0f * Math.PI / countAgents)));
                 goals.Add(-simulator.getAgentPosition(i));
                 InitGameObject(id);
             }
@@ -238,7 +239,11 @@ namespace IziHardGames.IziMoving.Mono.Components
         }
         private void InitGameObject(int id)
         {
-            var go = GameObject.Instantiate(testPrefabAgent);
+            var go = Instantiate(testPrefabAgent);
+            if (go != null && go.TryGetComponent<RVO2Visualize>(out var comp))
+            {
+                comp.Initlize(simulator.GetAgent(id));
+            }
             Action<GameObject, int> action = (go, id) =>
             {
                 var pos = simulator.getAgentPosition(id);

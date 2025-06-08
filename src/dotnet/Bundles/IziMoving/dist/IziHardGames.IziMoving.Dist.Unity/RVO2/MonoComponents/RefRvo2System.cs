@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using RVO;
 using UnityEngine;
 
-namespace IziHardGames.IziMoving.Mono.Components
+namespace IziHardGames.IziMoving.RVO2.MonoComponents
 {
+    [Guid("8c7df2fe-b652-493c-83b9-62cf2afe49f8")]
     public class RefRvo2System : MonoBehaviour
     {
         [SerializeField] private List<AgentRvo2> agents = new List<AgentRvo2>();
@@ -31,7 +33,7 @@ namespace IziHardGames.IziMoving.Mono.Components
         public void Initilize()
         {
             simulator = new Simulator();
-            this.random = new System.Random();
+            random = new System.Random();
             RebuildSimulation();
         }
 
@@ -101,7 +103,7 @@ namespace IziHardGames.IziMoving.Mono.Components
 
             foreach (var agent in agents)
             {
-                var vel = (agent.Destination - agent.Position);
+                var vel = agent.Destination - agent.Position;
                 var velPref = new RVO.Vector2(vel.x, vel.z);
 
                 var step = vel.sqrMagnitude;
