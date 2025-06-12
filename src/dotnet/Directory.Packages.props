@@ -7,6 +7,7 @@
     <WarningsNotAsErrors>CS1587;CS1570</WarningsNotAsErrors>
   </PropertyGroup>
   <ItemGroup>
+    <PackageVersion Include="IziHardGames.Refs.Pico.SDK" Version="1.0.0" />
     <PackageVersion Include="IziHardGames.UnityApps.Contracts" Version="0.0.4" />
     <PackageVersion Include="IziHardGames.UnityApps.Attributes" Version="0.0.3" />
     <PackageVersion Include="IziHardGames.UnityApps.Domain" Version="0.0.3" />
@@ -22,6 +23,9 @@
     <PackageVersion Include="IziHardGames.ValueObjects.Contracts" Version="0.0.1" />
     <PackageVersion Include="IziHardGames.CustomTypesForUnity" Version="0.0.1" />
     <PackageVersion Include="IziHardGames.DotNetPrimitives" Version="0.0.1" />
+    <PackageVersion Include="UnityEngine.Dist.XR" Version="1.0.1" />
+    <PackageVersion Include="IziHardGames.Refs.UnityEngine.XR" Version="1.0.1" />
+    <PackageVersion Include="IziHardGames.Refs.UnityEngineUI" Version="1.0.0" />
     <PackageVersion Include="IziHardGames.Refs.UnityEngine6000" Version="1.0.1" />
     <PackageVersion Include="IziHardGames.Refs.UnityEditor6000" Version="1.0.0" />
     <PackageVersion Include="IziHardGames.Refs.InputSystem" Version="1.11.2" />
