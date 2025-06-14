@@ -17,4 +17,21 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <NuspecFile>IziHardGames.DependencyInjection.Contracts.nuspec</NuspecFile>
   </PropertyGroup>
+  <ItemGroup>
+    <None Update="IziHardGames.DependencyInjection.Contracts.dll.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziHardGames.DependencyInjection.Contracts.pdb.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziHardGames.DependencyInjection.Contracts.xml.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="package.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="package.json.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>

@@ -1,7 +1,10 @@
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Properties;
-using UnityEditor;
+
 using UnityEngine;
 
 namespace Unity.XR.PXR.SecureMR

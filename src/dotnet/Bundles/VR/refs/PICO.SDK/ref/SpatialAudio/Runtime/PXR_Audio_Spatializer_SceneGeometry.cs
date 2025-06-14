@@ -1,10 +1,13 @@
 //  Copyright © 2015-2022 Pico Technology Co., Ltd. All Rights Reserved.
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using PXR_Audio.Spatializer;
-using UnityEditor;
+
 using UnityEngine;
 
 [RequireComponent(typeof(PXR_Audio_Spatializer_SceneMaterial))]

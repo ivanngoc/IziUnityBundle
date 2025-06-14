@@ -6,6 +6,7 @@ dotnet publish "Bundles\.Common\dist\IziHardGames.UnityApps.Attributes.Dist.Unit
 
 dotnet publish "Bundles\Commands\dist\IziHardGames.Commands.Dist.Unity\IziHardGames.Commands.Dist.Unity.csproj" -p:PublishProfile=FolderProfile
 dotnet publish "Bundles\DependencyInjection\dist\IziHardGames.DependencyInjection.Dist.Unity\IziHardGames.DependencyInjection.Dist.Unity.csproj" -p:PublishProfile=FolderProfile
+dotnet publish "Bundles\DependencyInjection\src\IziHardGames.DependencyInjection.Contracts\IziHardGames.DependencyInjection.Contracts.csproj" -p:PublishProfile=FolderProfile
 dotnet publish "Bundles\Event Sourcing\dist\IziHardGames.EventSourcing.Contracts\IziHardGames.EventSourcing.Dist.Unity.csproj" -p:PublishProfile=FolderProfile
 dotnet publish "Bundles\Geometry\Geometry.Dist.Unity\Geometry.Dist.Unity.csproj" -p:PublishProfile=FolderProfile
 dotnet publish "Bundles\IziEditor\src\IziHardGames.IziEditor\IziHardGames.IziUnityEditor.csproj" -p:PublishProfile=FolderProfile

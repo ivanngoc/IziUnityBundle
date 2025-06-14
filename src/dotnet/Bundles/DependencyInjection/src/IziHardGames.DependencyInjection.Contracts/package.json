@@ -1,14 +1,13 @@
 {
-  "name": "com.izihardgames.dependency-injection",
+  "name": "com.izihardgames.dependency-injection.contracts",
   "version": "1.0.0",
-  "displayName": "Izi Dependency Injection",
+  "displayName": "Izi Dependency Injection Contracts",
   "description": "This is an example package",
   "unity": "2022.3",
   "unityRelease": "12f1",
   "documentationUrl": "https://example.com/",
   "changelogUrl": "https://example.com/changelog.html",
   "licensesUrl": "https://example.com/licensing.html",
-  "guid": "b61b048f-f7f6-4b46-997a-83ed7d582297",
   "keywords": [
     "nonengine",
     "app",
@@ -19,8 +18,6 @@
     "email": "tna.work10@gmail.com",
     "url": "https://www.unity3d.com"
   },
-  "dependencies": {
-    "com.izihardgames.dependency-injection.contracts": "1.0.0"
-  },
+  "dependencies": {},
   "asmdefGuid": ""
 }

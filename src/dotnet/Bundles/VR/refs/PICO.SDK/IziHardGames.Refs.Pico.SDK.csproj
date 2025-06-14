@@ -25,7 +25,7 @@
   <ItemGroup>
     <PackageReference Include="IziHardGames.Refs.UnityEngineUI" PrivateAssets="All" />
     <PackageReference Include="IziHardGames.Refs.UnityEngine6000" PrivateAssets="All" />
-    <PackageReference Include="IziHardGames.Refs.UnityEditor6000" PrivateAssets="All" />
+    <PackageReference Condition="'$(Configuration)' != 'Release'" Include="IziHardGames.Refs.UnityEditor6000" PrivateAssets="All" />
     <PackageReference Include="IziHardGames.Refs.UnityEngine.XR" PrivateAssets="All" />
     <PackageReference Include="IziHardGames.Refs.InputSystem" PrivateAssets="All" />
   </ItemGroup>

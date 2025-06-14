@@ -13,7 +13,10 @@ PICO Technology Co., Ltd.
 using System;
 using System.Collections.Generic;
 using System.IO;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
+
 using UnityEngine;
 
 namespace Unity.XR.PXR

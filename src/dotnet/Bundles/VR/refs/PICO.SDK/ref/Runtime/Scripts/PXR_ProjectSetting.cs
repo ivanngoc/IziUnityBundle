@@ -10,9 +10,12 @@ material is strictly forbidden unless prior written permission is obtained from
 PICO Technology Co., Ltd. 
 *******************************************************************************/
 
-using System.IO;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
+using System.IO;
 using UnityEngine;
+
 
 namespace Unity.XR.PXR
 {

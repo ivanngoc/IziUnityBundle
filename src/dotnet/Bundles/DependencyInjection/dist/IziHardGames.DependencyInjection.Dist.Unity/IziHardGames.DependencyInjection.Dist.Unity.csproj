@@ -3,32 +3,25 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <Nullable>enable</Nullable>
-    <ProjectGuid>82a51fbb-3049-42a3-82c3-72df48352907</ProjectGuid>
+    <ProjectGuidOld>82a51fbb-3049-42a3-82c3-72df48352907</ProjectGuidOld>
+    <ProjectGuid>b1a64d1b278b0aa4282c5869859f1744</ProjectGuid>
     <RootNamespace>IziHardGames.DependencyInjection</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+    <PackageReference Include="IziHardGames.DependencyInjection.Contracts" PrivateAssets="All" />
     <PackageReference Include="IziHardGames.Refs.UnityEngine6000" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\IziHardGames.DependencyInjection.Contracts\IziHardGames.DependencyInjection.Contracts.csproj" />
     <ProjectReference Include="..\..\src\IziHardGames.DependencyInjection.Unity\IziHardGames.DependencyInjection.Unity.csproj" />
     <ProjectReference Include="..\..\src\IziHardGames.DependencyInjection\IziHardGames.DependencyInjection.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="IziHardGames.DependencyInjection.Contracts.dll.meta">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="IziHardGames.DependencyInjection.Contracts.pdb.meta">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="IziHardGames.DependencyInjection.Contracts.xml.meta">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+
     <None Update="IziHardGames.DependencyInjection.Dist.Unity.deps.json.meta">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

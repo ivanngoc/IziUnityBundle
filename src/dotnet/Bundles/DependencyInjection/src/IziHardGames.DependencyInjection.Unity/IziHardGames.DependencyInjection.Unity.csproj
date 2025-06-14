@@ -13,8 +13,8 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" PrivateAssets="All" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" PrivateAssets="All" />
-    <PackageReference Include="IziHardGames.Refs.UnityEngine6000" PrivateAssets="All" />
     <PackageReference Include="IziHardGames.DependencyInjection.Contracts" PrivateAssets="All" />
     <PackageReference Include="IziHardGames.EventSourcing.Contracts" PrivateAssets="All" />
+    <PackageReference Include="IziHardGames.Refs.UnityEngine6000" PrivateAssets="All" />
   </ItemGroup>
 </Project>
