@@ -1,5 +1,7 @@
-﻿using System;
+﻿#if UNITY_EDITOR
 using System.Linq;
+#endif
+using System;
 using System.Runtime.InteropServices;
 using UnityEngine;
 using Agent = IziHardGames.IziMoving.RVO2.Contracts.IRVOAgent<RVO.Line>;
@@ -34,7 +36,7 @@ namespace IziHardGames.IziMoving.RVO2.MonoComponents.Debugging
 #if UNITY_EDITOR
         private void OnDrawGizmos()
         {
-            if (UnityEditor.Selection.Contains(gameObject))
+            if (global::UnityEditor.Selection.Contains(gameObject))
             {
                 if (agent != null)
                 {

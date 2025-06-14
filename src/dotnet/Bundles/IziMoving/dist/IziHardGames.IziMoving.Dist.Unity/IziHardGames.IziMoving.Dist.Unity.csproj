@@ -6,15 +6,15 @@
     <RootNamespace>IziHardGames.IziMoving</RootNamespace>
     <ProjectGuid>24371c86-6c7e-4c07-be3f-394b642d669b</ProjectGuid>
   </PropertyGroup>
-  
-  <PropertyGroup Condition="'$(Configuration)' != 'Release'">
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
     <DefineConstants>UNITY_EDITOR</DefineConstants>
   </PropertyGroup>
 
-  <ItemGroup Condition="'$(Configuration)' != 'Release'">
+  <ItemGroup Condition="'$(Configuration)' == 'Debug'">
     <PackageReference Include="IziHardGames.Refs.UnityEditor6000" PrivateAssets="All" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <ProjectReference Include="..\..\src\IziHardGames.IziMoving.RVO2\IziHardGames.IziMoving.RVO2.csproj" />
     <ProjectReference Include="..\..\src\IziHardGames.IziMoving.SymmetricVortex.Unity\IziHardGames.IziMoving.SymmetricVortex.Unity.csproj" />
