@@ -1,7 +1,8 @@
+using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
-namespace System
+namespace IziHardGames.Extansions.Objects
 {
 	public static class ExtensionObject
 	{

@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace IziHardGames.Extensions.Systems
+namespace IziHardGames.Extansions.Bcl
 {
 	public static class ExtStringBuilder
 	{

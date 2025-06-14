@@ -1,0 +1,18 @@
+dotnet publish "Unsorted\com.izihardgames.extensions.netstd21\IziHardGames.DotNetPrimitives.csproj" -p:PublishProfile=FolderProfile
+dotnet publish "Unsorted\com.izihardgames.extensions.unity\IziHardGames.UnityTypes.Dist.csproj" -p:PublishProfile=FolderProfile
+dotnet publish "Bundles\.Common\dist\IziHardGames.Pools.Dist.Unity\IziHardGames.Pools.Dist.Unity.csproj" -p:PublishProfile=FolderProfile
+dotnet publish "Bundles\.Common\dist\IziHardGames.UnityApps.Attributes.Dist.Unity\IziHardGames.UnityApps.Attributes.Dist.Unity.csproj" -p:PublishProfile=FolderProfile
+
+
+dotnet publish "Bundles\Commands\dist\IziHardGames.Commands.Dist.Unity\IziHardGames.Commands.Dist.Unity.csproj" -p:PublishProfile=FolderProfile
+dotnet publish "Bundles\DependencyInjection\dist\IziHardGames.DependencyInjection.Dist.Unity\IziHardGames.DependencyInjection.Dist.Unity.csproj" -p:PublishProfile=FolderProfile
+dotnet publish "Bundles\Event Sourcing\dist\IziHardGames.EventSourcing.Contracts\IziHardGames.EventSourcing.Dist.Unity.csproj" -p:PublishProfile=FolderProfile
+dotnet publish "Bundles\Geometry\Geometry.Dist.Unity\Geometry.Dist.Unity.csproj" -p:PublishProfile=FolderProfile
+dotnet publish "Bundles\IziEditor\src\IziHardGames.IziEditor\IziHardGames.IziUnityEditor.csproj" -p:PublishProfile=FolderProfile
+dotnet publish "Bundles\IziLiquiMap\IziLiquiMap.Dist\IziLiquiMap.Dist.Unity.csproj" -p:PublishProfile=FolderProfile
+dotnet publish "Bundles\Scenes\dist\IziHardGames.UnityApps.Scenes.Dist.Unity\IziHardGames.UnityApps.Scenes.Dist.Unity.csproj" -p:PublishProfile=FolderProfile
+dotnet publish "Bundles\Units\dist\IziHardGames.Units.Dist.Unity\IziHardGames.Units.Dist.Unity.csproj" -p:PublishProfile=FolderProfile
+dotnet publish "Bundles\UnityApps\dist\IziHardGames.UnityApps.Dist.Unity\IziHardGames.UnityApps.Dist.Unity.csproj" -p:PublishProfile=FolderProfile
+dotnet publish "Bundles\User Control\dist\IziHardGames.UserControl.Dist.Unity\IziHardGames.UserControl.Dist.Unity.csproj" -p:PublishProfile=FolderProfile
+dotnet publish "Bundles\Value Objects\dist\IziHardGames.ValueObjects.Dist.Unity\IziHardGames.ValueObjects.Dist.Unity.csproj"" -p:PublishProfile=FolderProfile
+dotnet publish "Bundles\IziMoving\dist\IziHardGames.IziMoving.Dist.Unity\IziHardGames.IziMoving.Dist.Unity.csproj"" -p:PublishProfile=FolderProfile
