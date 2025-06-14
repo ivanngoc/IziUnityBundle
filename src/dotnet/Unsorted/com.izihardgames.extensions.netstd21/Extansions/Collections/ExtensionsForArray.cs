@@ -1,6 +1,7 @@
+using System;
 using System.Collections.Generic;
 
-namespace System
+namespace IziHardGames.Extansions.Collections
 {
 	public static class ExtensionsForArray
 	{

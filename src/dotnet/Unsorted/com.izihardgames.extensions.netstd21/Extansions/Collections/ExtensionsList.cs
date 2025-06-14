@@ -1,7 +1,8 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace System.Collections.Generic
+namespace IziHardGames.Extansions.Collections
 {
 	public static partial class ExtensionsICollection
 	{
@@ -262,7 +263,7 @@ namespace System.Collections.Generic
 				default:
 					break;
 			}
-			throw new System.NotSupportedException("Mode value not supproted");
+			throw new NotSupportedException("Mode value not supproted");
 		}
 	}
 }

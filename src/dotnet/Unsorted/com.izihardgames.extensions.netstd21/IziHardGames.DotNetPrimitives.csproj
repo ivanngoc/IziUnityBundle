@@ -14,11 +14,6 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
-    <!--<ProjectReference Include="$(IZHG_ROOT)\com.izihardgames.math.float.netstd21\izhg.math.float.netstd21.csproj">
-      <Project>d31068ba-1184-4e5d-a7d1-b5676786edaa</Project>
-    </ProjectReference>-->
-  </ItemGroup>
-  <ItemGroup>
     <None Update="package.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

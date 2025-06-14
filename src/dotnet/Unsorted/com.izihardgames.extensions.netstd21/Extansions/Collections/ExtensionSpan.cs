@@ -1,4 +1,6 @@
-namespace System
+using System;
+
+namespace IziHardGames.Extansions.Collections
 {
 	public static class ExtensionSpan
 	{
