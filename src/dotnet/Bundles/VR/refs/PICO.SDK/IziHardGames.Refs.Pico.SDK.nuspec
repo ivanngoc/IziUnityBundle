@@ -22,7 +22,7 @@
     <file src="bin\Release\netstandard2.1\IziHardGames.Refs.Pico.SDK.dll" target="lib\netstandard2.1" />
     <file src="bin\Release\netstandard2.1\IziHardGames.Refs.Pico.SDK.pdb" target="lib\netstandard2.1" />
     <file src="bin\Release\netstandard2.1\IziHardGames.Refs.Pico.SDK.xml" target="lib\netstandard2.1" />
-    <file src="LICENSE.md"  />
+    <file src="LICENSE"  />
     <file src="README.md" />
   </files>
 </package>

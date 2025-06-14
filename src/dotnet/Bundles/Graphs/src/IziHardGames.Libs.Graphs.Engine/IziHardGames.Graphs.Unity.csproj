@@ -6,9 +6,9 @@
     <RootNamespace>IziHardGames</RootNamespace>
     <Authors>Tran Ngoc Anh</Authors>
     <Company>IziHardGames</Company>
-    <Description>
-    </Description>
-    <Author>Tran Ngoc Anh</Author>
+    <Description></Description>
+    <DefineConstants>UNITY_EDITOR</DefineConstants>
+    <Author>Tran Ngoc Anh</Author> 
   </PropertyGroup>
 
   <ItemGroup>

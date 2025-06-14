@@ -3,13 +3,10 @@ using System.Collections.Generic;
 using System.Reflection;
 using IziHardGames.DependencyInjection.Contracts;
 using IziHardGames.EventSourcing.Contracts.Infrastracture;
-using IziHardGames.UnityApps.Attributes.DependencyInjection;
 using IziHardGames.UnityApps.Contracts.DependencyInjection;
 using IziHardGames.UnityApps.Contracts.Initializations;
 using IziHardGames.UnityApps.Domain.Events;
 using IziHardGames.UnityApps.Scenes.Contracts;
-using UnityEditor;
-using UnityEditor.TerrainTools;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -25,7 +22,7 @@ namespace IziHardGames.UnityScenes
         private static readonly CompletedAsyncOperation completed = new CompletedAsyncOperation();
 
 #if UNITY_EDITOR
-        public SceneAsset enterenceScene;
+        public UnityEditor.SceneAsset enterenceScene;
 #endif
 
         private void Awake()

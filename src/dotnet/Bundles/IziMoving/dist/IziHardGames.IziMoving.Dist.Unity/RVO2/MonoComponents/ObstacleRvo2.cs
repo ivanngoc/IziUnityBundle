@@ -56,6 +56,7 @@ namespace IziHardGames.IziMoving.RVO2.MonoComponents
             }
         }
 
+#if UNITY_EDITOR
         private void OnDrawGizmos()
         {
             for (int i = 1; i < shape.Count; i++)
@@ -63,5 +64,6 @@ namespace IziHardGames.IziMoving.RVO2.MonoComponents
                 Debug.DrawLine(shape[i - 1] + transform.position, shape[i] + transform.position, Color.magenta);
             }
         }
+#endif
     }
 }

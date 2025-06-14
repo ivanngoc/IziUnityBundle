@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using RVO;
-using UnityEditor;
 using UnityEngine;
 using Random = System.Random;
 using Vector2 = RVO.Vector2;
@@ -257,6 +256,8 @@ namespace IziHardGames.IziMoving.RVO2.MonoComponents.Debugging
             actions.Add(() => action(go, id));
         }
 
+#if UNITY_EDITOR
+
         private void OnDrawGizmos()
         {
             foreach (var obs in obstacles)
@@ -267,5 +268,6 @@ namespace IziHardGames.IziMoving.RVO2.MonoComponents.Debugging
                 }
             }
         }
+#endif
     }
 }

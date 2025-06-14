@@ -1,18 +1,26 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <ImplicitUsings>false</ImplicitUsings>
     <Nullable>enable</Nullable>
     <ProjectGuid>3f12b7622b5f6c34291401dc5f49116e</ProjectGuid>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <DefineConstants>PICO_XR;UNITY_EDITOR;XRI_300;UNITY_INPUT_SYSTEM</DefineConstants>
   </PropertyGroup>
-  
+
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <NuspecFile>IziHardGames.Refs.Pico.SDK.nuspec</NuspecFile>
   </PropertyGroup>
+
+  <ItemGroup Condition="'$(Configuration)' == 'Release'">
+    <Compile Remove="ref\**\*.cs" />
+    <None Include="ref\**\*.*">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <TargetPath>%(RecursiveDir)%(Filename)%(Extension)</TargetPath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="IziHardGames.Refs.UnityEngineUI" PrivateAssets="All" />

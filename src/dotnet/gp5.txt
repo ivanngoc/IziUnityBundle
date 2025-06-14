@@ -14,5 +14,8 @@ dotnet publish "Bundles\Scenes\dist\IziHardGames.UnityApps.Scenes.Dist.Unity\Izi
 dotnet publish "Bundles\Units\dist\IziHardGames.Units.Dist.Unity\IziHardGames.Units.Dist.Unity.csproj" -p:PublishProfile=FolderProfile
 dotnet publish "Bundles\UnityApps\dist\IziHardGames.UnityApps.Dist.Unity\IziHardGames.UnityApps.Dist.Unity.csproj" -p:PublishProfile=FolderProfile
 dotnet publish "Bundles\User Control\dist\IziHardGames.UserControl.Dist.Unity\IziHardGames.UserControl.Dist.Unity.csproj" -p:PublishProfile=FolderProfile
-dotnet publish "Bundles\Value Objects\dist\IziHardGames.ValueObjects.Dist.Unity\IziHardGames.ValueObjects.Dist.Unity.csproj"" -p:PublishProfile=FolderProfile
-dotnet publish "Bundles\IziMoving\dist\IziHardGames.IziMoving.Dist.Unity\IziHardGames.IziMoving.Dist.Unity.csproj"" -p:PublishProfile=FolderProfile
+dotnet publish "Bundles\Value Objects\dist\IziHardGames.ValueObjects.Dist.Unity\IziHardGames.ValueObjects.Dist.Unity.csproj" -p:PublishProfile=FolderProfile
+dotnet publish "Bundles\IziMoving\dist\IziHardGames.IziMoving.Dist.Unity\IziHardGames.IziMoving.Dist.Unity.csproj" -p:PublishProfile=FolderProfile
+
+
+dotnet publish "Bundles\VR\refs\PICO.SDK\IziHardGames.Refs.Pico.SDK.csproj" -p:PublishProfile=FolderProfile
