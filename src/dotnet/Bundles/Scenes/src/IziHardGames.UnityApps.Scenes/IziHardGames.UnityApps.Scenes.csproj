@@ -11,6 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Condition="'$(Configuration)' != 'Release'" Include="IziHardGames.Refs.UnityEditor6000" PrivateAssets="All" />
     <PackageReference Include="IziHardGames.UnityApps.Contracts" PrivateAssets="All" />
     <PackageReference Include="IziHardGames.UnityApps.Attributes" PrivateAssets="All" />
     <PackageReference Include="IziHardGames.UnityApps.Domain" PrivateAssets="All" />

@@ -7,10 +7,17 @@
     <Authors>Tran Ngoc Anh</Authors>
     <Company>IziHardGames</Company>
     <Description></Description>
-    <DefineConstants>UNITY_EDITOR</DefineConstants>
-    <Author>Tran Ngoc Anh</Author> 
+    <Author>Tran Ngoc Anh</Author>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)' != 'Release'">
+    <DefineConstants>UNITY_EDITOR</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(Configuration)' != 'Release'">
+    <PackageReference Include="IziHardGames.Refs.UnityEditor6000" PrivateAssets="All" />
+  </ItemGroup>
+  
   <ItemGroup>
     <PackageReference Include="IziHardGames.Refs.UnityEngine6000" PrivateAssets="All" />
     <PackageReference Include="IziHardGames.DotNetPrimitives" PrivateAssets="All" />

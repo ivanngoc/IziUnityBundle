@@ -26,8 +26,8 @@
     <PackageVersion Include="UnityEngine.Dist.XR" Version="1.0.1" />
     <PackageVersion Include="IziHardGames.Refs.UnityEngine.XR" Version="1.0.1" />
     <PackageVersion Include="IziHardGames.Refs.UnityEngineUI" Version="1.0.0" />
-    <PackageVersion Include="IziHardGames.Refs.UnityEngine6000" Version="1.0.1" />
-    <PackageVersion Include="IziHardGames.Refs.UnityEditor6000" Version="1.0.0" />
+    <PackageVersion Include="IziHardGames.Refs.UnityEngine6000" Version="1.0.2" />
+    <PackageVersion Include="IziHardGames.Refs.UnityEditor6000" Version="1.0.1" />
     <PackageVersion Include="IziHardGames.Refs.InputSystem" Version="1.11.2" />
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.5" />
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="9.0.5" />

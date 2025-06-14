@@ -14,6 +14,6 @@
 
   <ItemGroup>
     <PackageReference Include="IziHardGames.Refs.UnityEngine6000" PrivateAssets="All" />
-    <PackageReference Include="IziHardGames.IziUnityEditor" PrivateAssets="All" />
+    <PackageReference Condition="'$(Configuration)' != 'Release'" Include="IziHardGames.IziUnityEditor" PrivateAssets="All" />
   </ItemGroup>
 </Project>
