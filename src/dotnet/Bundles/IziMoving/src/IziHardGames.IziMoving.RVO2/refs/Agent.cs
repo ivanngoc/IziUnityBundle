@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Agent.cs
  * RVO2 Library C#
  *
@@ -42,7 +42,9 @@ namespace RVO
      */
     internal class Agent : IRVOAgent<Line>
     {
-        public IEnumerable<Line> Lines { get; private set; }
+        public int CountObstacles => obstacleNeighbors_.Count;
+        public int CountNeighbours => agentNeighbors_.Count;
+        public IEnumerable<Line> Lines { get => orcaLines_; }
         internal IList<KeyValuePair<float, Agent>> agentNeighbors_ = new List<KeyValuePair<float, Agent>>();
         internal IList<KeyValuePair<float, Obstacle>> obstacleNeighbors_ = new List<KeyValuePair<float, Obstacle>>();
         internal readonly IList<Line> orcaLines_;
@@ -63,7 +65,6 @@ namespace RVO
         public Agent(Simulator simulator)
         {
             orcaLines_ = new List<Line>();
-            Lines = orcaLines_;
             this.simulator = simulator;
         }
 
@@ -167,7 +168,7 @@ namespace RVO
                 else if (s >= 0.0f && s <= 1.0f && distSqLine <= radiusSq)
                 {
                     /* Collision with obstacle segment. */
-                    line.point = new Vector2(0.0f, 0.0f);
+                    line.point = new Vector2(0.0f, y: 0.0f);
                     line.direction = -obstacle1.direction_;
                     orcaLines_.Add(line);
 
@@ -418,13 +419,13 @@ namespace RVO
                     line.direction = new Vector2(unitW.y(), -unitW.x());
                     u = (combinedRadius * invTimeStep - wLength) * unitW;
                 }
-
+                // Because the algorithm is reciprocal, we can assume3 the opposing agent will also move to avoid the collision – thus, we only need to alter the velocity of each agent by ||u||/2 (directed away from one another in p-space). 
                 line.point = velocity_ + 0.5f * u;
                 orcaLines_.Add(line);
             }
 
-            int lineFail = linearProgram2(orcaLines_, maxSpeed_, prefVelocity_, false, ref newVelocity_);
-
+            int lineFail = linearProgram2(orcaLines_, maxSpeed_, prefVelocity_, false, out newVelocity_);
+            // если хотя бы одна линия не прошла тестирование
             if (lineFail < orcaLines_.Count)
             {
                 linearProgram3(orcaLines_, numObstLines, lineFail, maxSpeed_, ref newVelocity_);
@@ -625,8 +626,9 @@ namespace RVO
          * <param name="result">A reference to the result of the linear program.
          * </param>
          */
-        private int linearProgram2(IList<Line> lines, float radius, Vector2 optVelocity, bool directionOpt, ref Vector2 result)
+        private int linearProgram2(IList<Line> lines, float radius, Vector2 optVelocity, bool directionOpt, out Vector2 result)
         {
+            // задается желаемый вектор движения по 
             if (directionOpt)
             {
                 /*
@@ -648,7 +650,8 @@ namespace RVO
 
             for (int i = 0; i < lines.Count; ++i)
             {
-                if (RVOMath.det(lines[i].direction, lines[i].point - result) > 0.0f)
+                var dir = lines[i].point - result;
+                if (RVOMath.det(lines[i].direction, dir) > 0.0f)
                 {
                     /* Result does not satisfy constraint i. Compute new optimal result. */
                     Vector2 tempResult = result;
@@ -721,7 +724,7 @@ namespace RVO
                     }
 
                     Vector2 tempResult = result;
-                    if (linearProgram2(projLines, radius, new Vector2(-lines[i].direction.y(), lines[i].direction.x()), true, ref result) < projLines.Count)
+                    if (linearProgram2(projLines, radius, new Vector2(-lines[i].direction.y(), lines[i].direction.x()), true, out result) < projLines.Count)
                     {
                         /*
                          * This should in principle not happen. The result is by

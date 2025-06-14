@@ -51,7 +51,7 @@ namespace RVO
 
         private static readonly Simulator instance_ = new Simulator();
 
-        private Agent defaultAgent_;
+        private Agent? defaultAgent_;
         private ManualResetEvent[] doneEvents_;
         private Worker[] workers_;
         private int numWorkers_;

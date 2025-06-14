@@ -252,6 +252,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEngine.Dist.XR", "Unit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEngine.Dist.UI", "UnityEngine\UnityEngine.Dist.UI\UnityEngine.Dist.UI.csproj", "{4BB90D48-D40B-4B51-B04A-75AD6DB323AD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IziHardGames.IziMoving.SymmetricVortex", "Bundles\IziMoving\src\IziHardGames.IziMoving.SymmetricVortex\IziHardGames.IziMoving.SymmetricVortex.csproj", "{F54F7748-0F67-412C-B24C-20E2BC65CAE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IziHardGames.IziMoving.SymmetricVortex.Unity", "Bundles\IziMoving\src\IziHardGames.IziMoving.SymmetricVortex.Unity\IziHardGames.IziMoving.SymmetricVortex.Unity.csproj", "{EDBEDB3F-1A23-4883-ADB4-83C9BF099662}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -643,6 +647,18 @@ Global
 		{4BB90D48-D40B-4B51-B04A-75AD6DB323AD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4BB90D48-D40B-4B51-B04A-75AD6DB323AD}.Unity|Any CPU.ActiveCfg = Debug|Any CPU
 		{4BB90D48-D40B-4B51-B04A-75AD6DB323AD}.Unity|Any CPU.Build.0 = Debug|Any CPU
+		{F54F7748-0F67-412C-B24C-20E2BC65CAE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F54F7748-0F67-412C-B24C-20E2BC65CAE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F54F7748-0F67-412C-B24C-20E2BC65CAE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F54F7748-0F67-412C-B24C-20E2BC65CAE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F54F7748-0F67-412C-B24C-20E2BC65CAE6}.Unity|Any CPU.ActiveCfg = Debug|Any CPU
+		{F54F7748-0F67-412C-B24C-20E2BC65CAE6}.Unity|Any CPU.Build.0 = Debug|Any CPU
+		{EDBEDB3F-1A23-4883-ADB4-83C9BF099662}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDBEDB3F-1A23-4883-ADB4-83C9BF099662}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDBEDB3F-1A23-4883-ADB4-83C9BF099662}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDBEDB3F-1A23-4883-ADB4-83C9BF099662}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDBEDB3F-1A23-4883-ADB4-83C9BF099662}.Unity|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDBEDB3F-1A23-4883-ADB4-83C9BF099662}.Unity|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -763,6 +779,8 @@ Global
 		{1037BF8B-8BED-4DAE-921C-72AA6FF45B14} = {B8E8BD4F-DC72-4F26-AF00-3286AA33CB6B}
 		{94CF07B8-128F-4983-BDD8-50825F392ED9} = {82823C29-F2C7-4A88-AA1A-ECF65B36305E}
 		{4BB90D48-D40B-4B51-B04A-75AD6DB323AD} = {82823C29-F2C7-4A88-AA1A-ECF65B36305E}
+		{F54F7748-0F67-412C-B24C-20E2BC65CAE6} = {77B89680-CFE1-4120-BAD9-DF5A42532CC4}
+		{EDBEDB3F-1A23-4883-ADB4-83C9BF099662} = {77B89680-CFE1-4120-BAD9-DF5A42532CC4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CDAF4F07-1F84-4878-9E13-C5A68106DA8E}

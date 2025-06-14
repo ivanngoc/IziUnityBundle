@@ -28,7 +28,13 @@ namespace IziHardGames.IziMoving.RVO2.MonoComponents
         [SerializeField] private Vector3 destination;
         [SerializeField] private Vector3 positionSimulated;
         [SerializeField] private bool reached;
-      
+        public RVO.Vector2 Velocity { get; private set; }
+
+
+        public void SetVelocity(RVO.Vector2 velocity)
+        {
+            this.Velocity = velocity;
+        }
 
         public bool SetPosition(Vector3 vector3)
         {
@@ -60,6 +66,7 @@ namespace IziHardGames.IziMoving.RVO2.MonoComponents
 
         public void Dispose()
         {
+            Velocity = default;
             system = default;
         }
     }

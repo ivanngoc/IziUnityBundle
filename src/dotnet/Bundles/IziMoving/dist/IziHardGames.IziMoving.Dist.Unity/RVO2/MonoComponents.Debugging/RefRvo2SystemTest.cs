@@ -27,6 +27,7 @@ namespace IziHardGames.IziMoving.RVO2.MonoComponents.Debugging
         [SerializeField] float radius = 1.5f;
         [SerializeField] float timeScale = 1;
         [SerializeField] public GameObject? testPrefabAgent;
+        [SerializeField] public bool isDontNormilizePrefVelocity;
         [Header("Circle")]
         [SerializeField] public int countAgents = 250;
 
@@ -38,7 +39,7 @@ namespace IziHardGames.IziMoving.RVO2.MonoComponents.Debugging
         readonly List<Vector3[]> obstacles = new List<Vector3[]>();
         private Simulator simulator = null!;
 
-        private void Awake()
+        private void OnEnable()
         {
             actions.Clear();
             simulator = new Simulator();
@@ -100,9 +101,12 @@ namespace IziHardGames.IziMoving.RVO2.MonoComponents.Debugging
             {
                 Vector2 goalVector = goals[i] - simulator.getAgentPosition(i);
 
-                if (RVOMath.absSq(goalVector) > 1.0f)
+                if (!isDontNormilizePrefVelocity)
                 {
-                    goalVector = RVOMath.normalize(goalVector);
+                    if (RVOMath.absSq(goalVector) > 1.0f)
+                    {
+                        goalVector = RVOMath.normalize(goalVector);
+                    }
                 }
 
                 simulator.setAgentPrefVelocity(i, goalVector);

@@ -11,11 +11,25 @@ namespace IziHardGames.IziMoving.RVO2.MonoComponents.Debugging
     public class RVO2Visualize : MonoBehaviour
     {
         [SerializeField] Color colorOrcaLine = Color.black;
+        public int countObstacles;
+        public int countNeighbours;
         private Agent? agent;
+        /// <summary>
+        /// <seealso cref="RVO.Agent"/>
+        /// </summary>
         public Agent Agent => agent ?? throw new InvalidOperationException();
         public void Initlize(Agent agent)
         {
             this.agent = agent;
+        }
+
+        private void LateUpdate()
+        {
+            if (agent != null)
+            {
+                countObstacles = agent.CountObstacles;
+                countNeighbours = agent.CountNeighbours;
+            }
         }
 
         private void OnDrawGizmos()
@@ -24,7 +38,7 @@ namespace IziHardGames.IziMoving.RVO2.MonoComponents.Debugging
             {
                 if (agent != null)
                 {
-                    var arr = Agent.Lines.ToArray();
+                    var arr = agent.Lines.ToArray();
 
                     for (int i = 0; i < arr.Length; i++)
                     {

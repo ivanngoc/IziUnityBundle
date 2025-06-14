@@ -23,4 +23,8 @@
     <Compile Remove="refs\v2\*" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\IziHardGames.Moving.Contracts\IziHardGames.IziMoving.Contracts.csproj" />
+  </ItemGroup>
+
 </Project>

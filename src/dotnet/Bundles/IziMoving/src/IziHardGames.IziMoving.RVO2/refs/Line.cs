@@ -30,13 +30,14 @@
  *
  * <http://gamma.cs.unc.edu/RVO2/>
  */
+using IziHardGames.IziMoving.Contracts.Domain.Algo;
 
 namespace RVO
 {
     /**
      * <summary>Defines a directed line.</summary>
      */
-    public struct Line
+    public struct Line : IOrcaLine
     {
         public Vector2 direction;
         public Vector2 point;

@@ -5,10 +5,13 @@
     <Nullable>enable</Nullable>
     <RootNamespace>IziHardGames.IziMoving</RootNamespace>
     <ProjectGuid>24371c86-6c7e-4c07-be3f-394b642d669b</ProjectGuid>
+    <DefineConstants>UNITY_EDITOR</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\IziHardGames.IziMoving.RVO2\IziHardGames.IziMoving.RVO2.csproj" />
+    <ProjectReference Include="..\..\src\IziHardGames.IziMoving.SymmetricVortex.Unity\IziHardGames.IziMoving.SymmetricVortex.Unity.csproj" />
+    <ProjectReference Include="..\..\src\IziHardGames.IziMoving.SymmetricVortex\IziHardGames.IziMoving.SymmetricVortex.csproj" />
     <ProjectReference Include="..\..\src\IziHardGames.Moving.Contracts\IziHardGames.IziMoving.Contracts.csproj" />
     <ProjectReference Include="..\..\src\Trajectory Moving\IziHardGames.IziMoving.Trajectory.csproj" />
   </ItemGroup>
@@ -53,6 +56,24 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="IziHardGames.IziMoving.RVO2.xml.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziHardGames.IziMoving.SymmetricVortex.dll.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziHardGames.IziMoving.SymmetricVortex.pdb.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziHardGames.IziMoving.SymmetricVortex.Unity.dll.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziHardGames.IziMoving.SymmetricVortex.Unity.pdb.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziHardGames.IziMoving.SymmetricVortex.Unity.xml.meta">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IziHardGames.IziMoving.SymmetricVortex.xml.meta">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="IziHardGames.IziMoving.Trajectory.dll.meta">

@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ProjectGuid>e6daf71d-d5e3-48b1-a503-2faa7491465b</ProjectGuid>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IziHardGames.Geometry" PrivateAssets="all" />
+    <PackageReference Include="IziHardGames.Refs.UnityEngine6000" PrivateAssets="all"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IziHardGames.IziMoving.SymmetricVortex\IziHardGames.IziMoving.SymmetricVortex.csproj" />
+    <ProjectReference Include="..\IziHardGames.Moving.Contracts\IziHardGames.IziMoving.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>
