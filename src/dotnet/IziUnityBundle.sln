@@ -259,6 +259,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IziHardGames.IziMoving.Symm
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IziHardGames.VR.Dist.Unity", "Bundles\VR\dist\IziHardGames.VR.Dist.Unity\IziHardGames.VR.Dist.Unity.csproj", "{9555C361-4C56-4358-94F2-06BD6DF9D51C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SourceGenerators", "SourceGenerators", "{AD3BA90B-F737-4D5E-907F-0680193196BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IziHardGames.SourceGenerators.UnitySG", "SourceGenerators\IziHardGames.SourceGenerators.UnitySG\IziHardGames.SourceGenerators.UnitySG.csproj", "{E176EA97-739B-48B2-8697-A45D60F7D732}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -668,6 +672,12 @@ Global
 		{9555C361-4C56-4358-94F2-06BD6DF9D51C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9555C361-4C56-4358-94F2-06BD6DF9D51C}.Unity|Any CPU.ActiveCfg = Debug|Any CPU
 		{9555C361-4C56-4358-94F2-06BD6DF9D51C}.Unity|Any CPU.Build.0 = Debug|Any CPU
+		{E176EA97-739B-48B2-8697-A45D60F7D732}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E176EA97-739B-48B2-8697-A45D60F7D732}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E176EA97-739B-48B2-8697-A45D60F7D732}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E176EA97-739B-48B2-8697-A45D60F7D732}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E176EA97-739B-48B2-8697-A45D60F7D732}.Unity|Any CPU.ActiveCfg = Debug|Any CPU
+		{E176EA97-739B-48B2-8697-A45D60F7D732}.Unity|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -791,6 +801,7 @@ Global
 		{F54F7748-0F67-412C-B24C-20E2BC65CAE6} = {77B89680-CFE1-4120-BAD9-DF5A42532CC4}
 		{EDBEDB3F-1A23-4883-ADB4-83C9BF099662} = {77B89680-CFE1-4120-BAD9-DF5A42532CC4}
 		{9555C361-4C56-4358-94F2-06BD6DF9D51C} = {D61C9AFB-629E-4BC8-930C-F74CAF740C7B}
+		{E176EA97-739B-48B2-8697-A45D60F7D732} = {AD3BA90B-F737-4D5E-907F-0680193196BD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CDAF4F07-1F84-4878-9E13-C5A68106DA8E}

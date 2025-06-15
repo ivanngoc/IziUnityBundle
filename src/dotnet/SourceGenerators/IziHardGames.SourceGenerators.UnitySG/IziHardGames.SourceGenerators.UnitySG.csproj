@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <!--<Nullable>enable</Nullable>-->
+    <RootNamespace>IziHardGames.SourceGenerators.UnitySG</RootNamespace>
+    <ProjectGuid>86022a56-e531-4856-a668-8c8ab30aff51</ProjectGuid>
+    <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+</Project>

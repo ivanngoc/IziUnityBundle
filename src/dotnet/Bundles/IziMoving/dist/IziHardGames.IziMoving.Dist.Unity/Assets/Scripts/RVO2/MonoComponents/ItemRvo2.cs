@@ -1,7 +1,9 @@
-﻿using UnityEngine;
+﻿using System.Runtime.InteropServices;
+using UnityEngine;
 
 namespace IziHardGames.IziMoving.RVO2.MonoComponents
 {
+    [Guid("873619e3-969f-6554-a9f3-659ad03a3840")]
     public abstract class ItemRvo2 : MonoBehaviour
     {
         public int Id => id;

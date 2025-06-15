@@ -5,16 +5,17 @@
     <Nullable>enable</Nullable>
     <RootNamespace>IziHardGames.IziMoving</RootNamespace>
     <ProjectGuid>24371c86-6c7e-4c07-be3f-394b642d669b</ProjectGuid>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
     <DefineConstants>UNITY_EDITOR</DefineConstants>
   </PropertyGroup>
 
-  <ItemGroup Condition="'$(Configuration)' == 'Debug'">
-    <PackageReference Include="IziHardGames.Refs.UnityEditor6000" PrivateAssets="All" />
-  </ItemGroup>
+  <!-- не работет
+  <Target Name="CleanPublishOutput" BeforeTargets="Publish">
+    <RemoveDir Directories="$(PublishDir)" />
+  </Target>-->
 
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+  </PropertyGroup>
+  
   <ItemGroup>
     <ProjectReference Include="..\..\src\IziHardGames.IziMoving.RVO2\IziHardGames.IziMoving.RVO2.csproj" />
     <ProjectReference Include="..\..\src\IziHardGames.IziMoving.SymmetricVortex.Unity\IziHardGames.IziMoving.SymmetricVortex.Unity.csproj" />
@@ -23,18 +24,19 @@
     <ProjectReference Include="..\..\src\Trajectory Moving\IziHardGames.IziMoving.Trajectory.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Remove="Assets\*" />
+  <ItemGroup Condition="'$(Configuration)' == 'Release'">
+    <Compile Remove="Assets\**\*" />
     <None Include="Assets\**\*">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Components\**\*.meta">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 
-  <ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' == 'Debug'">
     <PackageReference Include="IziHardGames.Refs.UnityEngine6000" PrivateAssets="all" />
+    <PackageReference Include="IziHardGames.Refs.UnityEditor6000" PrivateAssets="all" />
+    <ProjectReference Include="..\..\..\..\SourceGenerators\IziHardGames.SourceGenerators.UnitySG\IziHardGames.SourceGenerators.UnitySG.csproj"
+                  OutputItemType="Analyzer"
+                  ReferenceOutputAssembly="false"/>
   </ItemGroup>
 
   <ItemGroup>

@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 namespace IziHardGames.IziMoving.RVO2.MonoComponents
 {
+    [Guid("40afe79e-8f28-4994-e8d7-823eaecf268d")]
     public class ObstacleRvo2 : ItemRvo2
     {
         /// <summary>
