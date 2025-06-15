@@ -31,12 +31,14 @@
  * <http://gamma.cs.unc.edu/RVO2/>
  */
 
+using IziHardGames.IziMoving.RVO2.Contracts;
+
 namespace RVO
 {
     /**
      * <summary>Defines static obstacles in the simulation.</summary>
      */
-    internal class Obstacle
+    internal class Obstacle : IRVOObstacle
     {
 
         internal Obstacle? next_;
@@ -45,5 +47,11 @@ namespace RVO
         internal Vector2 point_;
         internal int id_;
         internal bool convex_;
+
+        public bool Convex => convex_;
+        public IRVOObstacle? Next => next_;
+        public IRVOObstacle? Previous => previous_;
+        public (float x, float y) Direction => (direction_.x_, direction_.y_);
+        public (float x, float y) Point => (point_.x_, point_.y_);
     }
 }

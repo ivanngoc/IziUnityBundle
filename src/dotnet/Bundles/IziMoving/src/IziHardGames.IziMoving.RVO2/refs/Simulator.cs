@@ -534,6 +534,10 @@ namespace RVO
             return obstacles_[vertexNo].point_;
         }
 
+        public IRVOObstacle GetObstacle(int obstacleNo)
+        {
+            return obstacles_[obstacleNo];
+        }
         /**
          * <summary>Returns the number of the obstacle vertex succeeding the
          * specified obstacle vertex in its polygon.</summary>
