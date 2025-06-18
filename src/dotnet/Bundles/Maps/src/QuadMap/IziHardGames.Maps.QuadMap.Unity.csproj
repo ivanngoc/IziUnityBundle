@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Mapping2D\IziHardGames.NonEngine.Mapping.Mapping2D.asmdef.csproj" />
+    <ProjectReference Include="..\Mapping2D\IziHardGames.Maps.Mapping2D.csproj" />
   </ItemGroup>
   
   <!--<ItemGroup>

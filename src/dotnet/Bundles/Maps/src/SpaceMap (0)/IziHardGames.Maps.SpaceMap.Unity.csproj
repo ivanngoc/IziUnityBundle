@@ -19,7 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Geometry\src\Vectors\IziHardGames.Libs.Engine.Vectors.asmdef.csproj" />
-    <ProjectReference Include="..\SpaceMap\IziHardGames.Libs.NonEngine.SpaceMap.asmdef.csproj" />
+    <ProjectReference Include="..\SpaceMap\IziHardGames.Maps.SpaceMap.csproj" />
   </ItemGroup>
   
   <!--<ItemGroup>

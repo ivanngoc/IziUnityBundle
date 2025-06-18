@@ -1,0 +1,10 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <ProjectGuid>f573534a-7014-4581-8fce-47003cff613c</ProjectGuid>
+    <RootNamespace>IziHardGames.Maps</RootNamespace>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+</Project>
