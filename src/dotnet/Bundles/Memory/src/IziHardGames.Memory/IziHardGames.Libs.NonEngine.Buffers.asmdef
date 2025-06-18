@@ -1,0 +1,17 @@
+{
+  "name": "IziHardGames.Libs.NonEngine.Buffers",
+  "rootNamespace": "IziHardGames.Libs.NonEngine.Buffers",
+  "references": [
+    "GUID:e5dafb6bbd1d44c428b77bc1e9205e3c"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false,
+  "UNITY_META_GUID": "a30a9db3-9c6f-2f74-9a2a-1241914b8f45"
+}

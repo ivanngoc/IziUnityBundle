@@ -1,0 +1,17 @@
+{
+  "name": "IziHardGaems.Libs.Engine.Editor",
+  "rootNamespace": "IziHardGaems.Libs.Engine.ForEditor",
+  "references": [],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false,
+  "UNITY_META_GUID": "1c3d9f3f-25f0-fd44-7a4e-2560a715e54f"
+}

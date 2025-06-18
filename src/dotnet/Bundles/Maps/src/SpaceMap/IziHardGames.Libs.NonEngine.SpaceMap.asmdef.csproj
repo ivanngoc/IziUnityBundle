@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <ProjectGuid>fcb5f143-386a-475f-9463-91c15736d211</ProjectGuid>
+    <RootNamespace>IziHardGames</RootNamespace>
+    <Authors>Tran Ngoc Anh</Authors>
+    <Company>IziHardGames</Company>
+    <Description></Description>
+    <Author>Tran Ngoc Anh</Author>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IziHardGames.Geometry" PrivateAssets="all" />
+    <PackageReference Include="IziHardGames.Pools.Contracts" PrivateAssets="all" />
+    <PackageReference Include="IziHardGames.DotNetPrimitives" PrivateAssets="all" />
+  </ItemGroup>
+  <!--<ItemGroup>
+    <ProjectReference Include="$(IZHG_ROOT)\com.izihardgames.extensions.netstd21\izhg.extensions.netstd21.csproj">
+      <Project>9a40762f-aea1-43a4-869c-cb9582884a51</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(IZHG_ROOT)\com.izihardgames.pools.netstd21\Runtime\Any\izhg.pools.netstd21.asmdef.csproj">
+      <Project>706eeb85-5f98-44c4-bfb4-e929fc152544</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(IZHG_ROOT)\Rectangles\IziHardGames.Libs.NonEngine.Rectangles.asmdef.csproj">
+      <Project>7d75ecd1-2003-4d2d-bd88-683ef6918c14</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(IZHG_ROOT)\Vectors (0)\IziHardGames.Libs.NonEngine.Vectors.asmdef.csproj">
+      <Project>784d81a3-9036-4f29-a2b2-361cd23e6db3</Project>
+    </ProjectReference>
+  </ItemGroup>    -->
+</Project>

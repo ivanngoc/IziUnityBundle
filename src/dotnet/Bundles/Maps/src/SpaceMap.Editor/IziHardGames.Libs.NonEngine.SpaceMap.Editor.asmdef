@@ -1,0 +1,22 @@
+{
+  "name": "IziHardGames.Libs.NonEngine.SpaceMap.Editor",
+  "rootNamespace": "IziHardGames.Libs.NonEngine.SpaceMap.Editor",
+  "references": [
+    "GUID:388d4836110ba784bae16549263575f5",
+    "GUID:310c22d4f83bd3748923296f0b3a5cc3",
+    "GUID:1c3d9f3f25f0fd447a4e2560a715e54f",
+    "GUID:8c3bc8be546fb6d46945f1d3f64f53df"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false,
+  "UNITY_META_GUID": "dc2017c2-bfb2-0c14-e813-8b4942d8491a"
+}

@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <ProjectGuid>cf854f1e-38c4-4286-8a3e-dce16acc4f8c</ProjectGuid>
+    <RootNamespace>IziHardGames</RootNamespace>
+    <Authors>Tran Ngoc Anh</Authors>
+    <Company>IziHardGames</Company>
+    <Author>Tran Ngoc Anh</Author>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IziHardGames.Geometry" PrivateAssets="all" />
+    <PackageReference Include="IziHardGames.UnityTypes" PrivateAssets="all" />
+    <PackageReference Include="IziHardGames.Pools.Contracts" PrivateAssets="all" />
+    <PackageReference Include="IziHardGames.DotNetPrimitives" PrivateAssets="all" />
+    <PackageReference Include="IziHardGames.Refs.UnityEngine6000" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Geometry\src\Vectors\IziHardGames.Libs.Engine.Vectors.asmdef.csproj" />
+    <ProjectReference Include="..\SpaceMap\IziHardGames.Libs.NonEngine.SpaceMap.asmdef.csproj" />
+  </ItemGroup>
+  
+  <!--<ItemGroup>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\Unity3d Dlls\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(IZHG_ROOT)\com.izihardgames.extensions.unity\Runtime\IziHardGames.Libs.Engine.Extensions.asmdef.csproj">
+      <Project>4c31f516-8713-47c8-9f75-adac4bed6497</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(IZHG_ROOT)\Rectangles\IziHardGames.Libs.NonEngine.Rectangles.asmdef.csproj">
+      <Project>7d75ecd1-2003-4d2d-bd88-683ef6918c14</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(IZHG_ROOT)\SpaceMap\IziHardGames.Libs.NonEngine.SpaceMap.asmdef.csproj">
+      <Project>fcb5f143-386a-475f-9463-91c15736d211</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(IZHG_ROOT)\Vectors (0)\IziHardGames.Libs.NonEngine.Vectors.asmdef.csproj">
+      <Project>784d81a3-9036-4f29-a2b2-361cd23e6db3</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(IZHG_ROOT)\Vectors\IziHardGames.Libs.Engine.Vectors.asmdef.csproj">
+      <Project>fd7ca9da-2b1e-4226-bdad-8fd084adc754</Project>
+    </ProjectReference>
+  </ItemGroup>-->
+</Project>

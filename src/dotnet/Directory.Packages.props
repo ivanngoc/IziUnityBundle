@@ -18,7 +18,7 @@
     <PackageVersion Include="IziHardGames.Binary" Version="0.0.2" />
     <PackageVersion Include="IziHardGames.Pools.Contracts" Version="0.0.6" />
     <PackageVersion Include="IziHardGames.Commands.Contracts" Version="0.0.2" />
-    <PackageVersion Include="IziHardGames.Geometry" Version="0.0.29" />
+    <PackageVersion Include="IziHardGames.Geometry" Version="0.0.30" />
     <PackageVersion Include="IziHardGames.EventSourcing.Contracts" Version="0.0.5" />
     <PackageVersion Include="IziHardGames.ValueObjects.Contracts" Version="0.0.1" />
     <PackageVersion Include="IziHardGames.CustomTypesForUnity" Version="0.0.1" />

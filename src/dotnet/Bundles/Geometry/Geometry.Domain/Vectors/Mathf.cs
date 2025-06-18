@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 
 namespace IziHardGames.Geometry.Domain.Vectors
 {
@@ -47,6 +48,12 @@ namespace IziHardGames.Geometry.Domain.Vectors
             }
 
             return value;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static float Sign(float f)
+        {
+            return (f >= 0f) ? 1f : (-1f);
         }
     }
 }

@@ -6,6 +6,11 @@
     <RootNamespace>IziHardGames.Geometry.Domain</RootNamespace>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' != 'Release'">
+    <DefineConstants>UNITY_EDITOR</DefineConstants>
+  </PropertyGroup>
+  
   <ItemGroup>
     <None Update="Geometry.Domain.dll.meta">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
