@@ -301,6 +301,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IziHardGames.Libs.Engine.Sp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IziHardGames.NonEngine.Mapping.Mapping2D.asmdef", "Bundles\Maps\src\Mapping2D\IziHardGames.NonEngine.Mapping.Mapping2D.asmdef.csproj", "{563409F8-E52F-433C-87F4-1477E20FE259}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IziHardGames.Libs.Engine.Memory.asmdef", "Bundles\Memory\src\Memory\IziHardGames.Libs.Engine.Memory.asmdef.csproj", "{688CA302-3A14-4BA7-88E2-870D89547170}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -794,6 +796,12 @@ Global
 		{563409F8-E52F-433C-87F4-1477E20FE259}.Release|Any CPU.Build.0 = Release|Any CPU
 		{563409F8-E52F-433C-87F4-1477E20FE259}.Unity|Any CPU.ActiveCfg = Debug|Any CPU
 		{563409F8-E52F-433C-87F4-1477E20FE259}.Unity|Any CPU.Build.0 = Debug|Any CPU
+		{688CA302-3A14-4BA7-88E2-870D89547170}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{688CA302-3A14-4BA7-88E2-870D89547170}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{688CA302-3A14-4BA7-88E2-870D89547170}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{688CA302-3A14-4BA7-88E2-870D89547170}.Release|Any CPU.Build.0 = Release|Any CPU
+		{688CA302-3A14-4BA7-88E2-870D89547170}.Unity|Any CPU.ActiveCfg = Debug|Any CPU
+		{688CA302-3A14-4BA7-88E2-870D89547170}.Unity|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -937,6 +945,7 @@ Global
 		{3A8B7880-FF0C-472D-AF59-389372429015} = {2DBB9097-E350-44CC-B24F-66D4525E68F1}
 		{C2A5C859-DB21-49C3-B7A7-BDBDC96F0180} = {88198B95-67C2-4C6A-983F-863F74CBF04F}
 		{563409F8-E52F-433C-87F4-1477E20FE259} = {88198B95-67C2-4C6A-983F-863F74CBF04F}
+		{688CA302-3A14-4BA7-88E2-870D89547170} = {640EC8BD-BCE7-4FC3-9E1C-AD3E81065853}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CDAF4F07-1F84-4878-9E13-C5A68106DA8E}
